@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.arkluo.com","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+    var CONFIG = {"hostname":"www.arkluo.com","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="个人介绍&amp;emsp;&amp;emsp;博主四川人，目前在浙江大学就读本科，专业是光电信息科学与工程。喜欢轻音乐、偶尔弹弹吉他舒下情，爱好收集，目前收集品为游戏王卡牌、纪念币以及收集养成类型游戏YYS和漫威未来之战，后续还会收集水浒兵器和三国VIP卡片。 博客介绍 &amp;emsp;&amp;emsp;本博客大致分为生活感想、学习所悟、收藏展示几个板块。随缘更新，现阶段每天更新一下考研复习每天所复习背诵内容（2020.">
 <meta property="og:type" content="website">
@@ -117,6 +117,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -150,11 +151,37 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
         
@@ -271,7 +298,7 @@
           <p><strong>个人介绍</strong><br>&emsp;&emsp;博主四川人，目前在浙江大学就读本科，专业是光电信息科学与工程。喜欢轻音乐、偶尔弹弹吉他舒下情，爱好收集，目前收集品为游戏王卡牌、纪念币以及收集养成类型游戏YYS和漫威未来之战，后续还会收集水浒兵器和三国VIP卡片。</p>
 <p><strong>博客介绍</strong></p>
 <p>&emsp;&emsp;本博客大致分为生活感想、学习所悟、收藏展示几个板块。随缘更新，现阶段每天更新一下考研复习每天所复习背诵内容（2020.11.29起），后续考研结束后会更新收藏品，随缘更新下家里的小可爱——蓝白英短小西米、两只红贵丫丫可可。</p>
-<p><strong>联系方式</strong><br>Email: <a href="mailto:&#97;&#x72;&#107;&#108;&#x75;&#111;&#x40;&#x7a;&#x6a;&#117;&#46;&#101;&#x64;&#x75;&#46;&#99;&#110;">&#97;&#x72;&#107;&#108;&#x75;&#111;&#x40;&#x7a;&#x6a;&#117;&#46;&#101;&#x64;&#x75;&#46;&#99;&#110;</a></p>
+<p><strong>联系方式</strong><br>Email: <a href="mailto:&#x61;&#x72;&#x6b;&#x6c;&#x75;&#x6f;&#x40;&#122;&#106;&#117;&#x2e;&#101;&#100;&#x75;&#x2e;&#x63;&#110;">&#x61;&#x72;&#x6b;&#x6c;&#x75;&#x6f;&#x40;&#122;&#106;&#117;&#x2e;&#101;&#100;&#x75;&#x2e;&#x63;&#110;</a></p>
 <p><strong>教育经历</strong></p>
 <table>
 <thead>
@@ -341,9 +368,27 @@
   <span class="author" itemprop="copyrightHolder">Ark Luo</span>
 </div>
 <div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
 </div>
+
+<!--
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
+  </div>-->
 
     </div>
   </footer>
@@ -354,6 +399,7 @@
 
   
 
+<script src="/js/local-search.js"></script>
 
 
 
