@@ -182,6 +182,8 @@
 
         <section class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Ark Luo"
+      src="/images/avatar.JPG">
   <p class="site-author-name" itemprop="name">Ark Luo</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -208,6 +210,17 @@
       </div>
   </nav>
 </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Arklwz" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Arklwz" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:810135726@qq.com" title="E-Mail → mailto:810135726@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/5862313777" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5862313777" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
 
 
 
@@ -270,6 +283,11 @@
     
 
 
+    
+  <div class="comments">
+    <div id="utterances-container"></div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -334,6 +352,19 @@
 
 
 
+
+<script>
+NexT.utils.loadComments('#utterances-container', () => {
+  const script = document.createElement('script');
+  script.src = 'https://utteranc.es/client.js';
+  script.setAttribute('repo', "arklwz.github.io");
+  script.setAttribute('issue-term', "pathname");
+  script.setAttribute('theme', "preferred-color-scheme");
+  script.crossOrigin = 'anonymous';
+  script.async = true;
+  document.querySelector('#utterances-container').appendChild(script);
+});
+</script>
 
 </body>
 </html>
