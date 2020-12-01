@@ -211,9 +211,9 @@
       </tags>
   </entry>
   <entry>
-    <title>物理光学——光的衍射(持续更新中)</title>
+    <title>物理光学——光的衍射</title>
     <url>/2020/11/30/opt2/</url>
-    <content><![CDATA[<p>&emsp;&emsp;本章重点为典型的夫朗和费衍射系统<br><a id="more"></a><br>&emsp;&emsp;该部分《841工程光学基础》考纲内容如下</p>
+    <content><![CDATA[<p>&emsp;&emsp;本章重点为典型的夫朗和费衍射系统和光栅部分<br><a id="more"></a><br>等有空有机会把图贴上<br>&emsp;&emsp;该部分《841工程光学基础》考纲内容如下</p>
 <blockquote>
 <p>熟练掌握典型的夫朗和费衍射系统概念和计算；掌握闪耀光栅的原理和计算；衍射极限的概念及在典型光学系统设计中的运用；夫朗和费衍射与傅立叶变换的关系；菲涅耳波带片的概念和使用。</p>
 </blockquote>
@@ -244,7 +244,33 @@
 <li>强度分布<br>$ I(P) = I_0[\frac{2J_1(Z}{Z}]^2, Z = ka\theta$</li>
 <li>衍射图样<br>(1)圆孔衍射图样是中心明亮，明暗相间的同心圆环，在θ=0（即点源几何像）处强度最大，随θ变化，会出现强度的极大、极小<br>(2)极大、极小值分布不等间距<br>第一极小位置$ Z = 1.22\pi$, 即$\theta = \frac{0.61\lambda}{a} = \frac{1.22\lambda}{D}$ 为艾里斑半径<br>次级大$ J_2(Z) = 0 $<br>(3)衍射效应与孔径线度成反比，与波长成正比</li>
 </ul>
-<h2 id="光学成像系统的衍射和分辨本领"><a href="#光学成像系统的衍射和分辨本领" class="headerlink" title="光学成像系统的衍射和分辨本领"></a>光学成像系统的衍射和分辨本领</h2><h3 id="成像系统的衍射现象"><a href="#成像系统的衍射现象" class="headerlink" title="成像系统的衍射现象"></a>成像系统的衍射现象</h3><h3 id="在像面观察的夫琅和费衍射"><a href="#在像面观察的夫琅和费衍射" class="headerlink" title="在像面观察的夫琅和费衍射"></a>在像面观察的夫琅和费衍射</h3><h3 id="光学成像系统的分辨率"><a href="#光学成像系统的分辨率" class="headerlink" title="光学成像系统的分辨率"></a>光学成像系统的分辨率</h3><h2 id="多缝的夫琅和费衍射"><a href="#多缝的夫琅和费衍射" class="headerlink" title="多缝的夫琅和费衍射"></a>多缝的夫琅和费衍射</h2><h3 id="多缝的强度分布公式"><a href="#多缝的强度分布公式" class="headerlink" title="多缝的强度分布公式"></a>多缝的强度分布公式</h3><h3 id="多缝衍射图样的特征"><a href="#多缝衍射图样的特征" class="headerlink" title="多缝衍射图样的特征"></a>多缝衍射图样的特征</h3><h2 id="衍射光栅"><a href="#衍射光栅" class="headerlink" title="衍射光栅"></a>衍射光栅</h2><h3 id="光栅的分光性能"><a href="#光栅的分光性能" class="headerlink" title="光栅的分光性能"></a>光栅的分光性能</h3><h3 id="正弦-振幅-光栅"><a href="#正弦-振幅-光栅" class="headerlink" title="正弦(振幅)光栅"></a>正弦(振幅)光栅</h3><h3 id="闪耀光栅"><a href="#闪耀光栅" class="headerlink" title="闪耀光栅"></a>闪耀光栅</h3><h3 id="阶梯光栅"><a href="#阶梯光栅" class="headerlink" title="阶梯光栅"></a>阶梯光栅</h3><h3 id="体光栅"><a href="#体光栅" class="headerlink" title="体光栅"></a>体光栅</h3><h2 id="二元光学元件"><a href="#二元光学元件" class="headerlink" title="二元光学元件"></a>二元光学元件</h2>]]></content>
+<h2 id="光学成像系统的衍射和分辨本领"><a href="#光学成像系统的衍射和分辨本领" class="headerlink" title="光学成像系统的衍射和分辨本领"></a>光学成像系统的衍射和分辨本领</h2><h3 id="成像系统的衍射现象"><a href="#成像系统的衍射现象" class="headerlink" title="成像系统的衍射现象"></a>成像系统的衍射现象</h3><h3 id="在像面观察的夫琅和费衍射"><a href="#在像面观察的夫琅和费衍射" class="headerlink" title="在像面观察的夫琅和费衍射"></a>在像面观察的夫琅和费衍射</h3><ul>
+<li>成像系统对近处点物在像面所成的夫琅和费衍射像等价于平面波入射时，在$ f = R$的透镜焦面上产生的孔径夫琅和费衍射分布，这提供一种用会聚光照明在像面得到孔径频谱的方法。</li>
+</ul>
+<h3 id="光学成像系统的分辨率"><a href="#光学成像系统的分辨率" class="headerlink" title="光学成像系统的分辨率"></a>光学成像系统的分辨率</h3><ul>
+<li>瑞利判据：当一个点物衍射图样的中央极大刚好为另一个点物衍射图样的第一极小时，认为此时两点物可分辨。</li>
+<li>典型光学系统的分辨本领<br>(1)人眼的最小可分辨角$ \alpha = \frac{1.22\lambda}{d} $<br>(2)望远物镜最小可分辨角$ \alpha = \theta =  \frac{1.22\lambda}{D} $<br>(3)照相物镜分辨本领$ N = \frac{D}{1.22\lambda f} $(底片上每毫米可分辨的线条数)<br>(4)显微物镜的最小可分辨距$ \varepsilon = \frac{0.61\lambda}{n\sin u}$</li>
+</ul>
+<h2 id="多缝的夫琅和费衍射"><a href="#多缝的夫琅和费衍射" class="headerlink" title="多缝的夫琅和费衍射"></a>多缝的夫琅和费衍射</h2><h3 id="多缝的强度分布公式"><a href="#多缝的强度分布公式" class="headerlink" title="多缝的强度分布公式"></a>多缝的强度分布公式</h3><ul>
+<li>$ I(P) = I_0(\frac{sin\alpha}{\alpha})^2(\frac{sin\frac{N\delta}{2}}{sin\frac{\delta}{2}})^2$<br>其中$\alpha = \frac{kla}{2}$ 或 $ asin\theta = n\lambda$<br>&emsp;&emsp;$\delta = \frac{2\pi}{\lambda}dsin\theta$ 或 $dsin\theta = m\lambda $</li>
+<li>该式包含单缝单缝衍射和多缝干涉</li>
+</ul>
+<h3 id="多缝衍射图样的特征"><a href="#多缝衍射图样的特征" class="headerlink" title="多缝衍射图样的特征"></a>多缝衍射图样的特征</h3><ul>
+<li>由$(\frac{sin\frac{N\delta}{2}}{sin\frac{\delta}{2}})^2$取干涉极大极小值位置<br>(1)当$\delta = 2m\pi$ 或 $ dsin\theta = m\lambda $ 时出现干涉主极大，且强度为单缝时的$N^2$倍<br>(2)当$ \delta = \frac{2m\pi}{N}$ 或 $ dsin\theta = (m + \frac{m’}{N})\lambda$时出现干涉极小值<br>(3)相邻两个极小值间有一次极大，因而相邻两主极大间有(N－1)个极小值，(N－2)个次极大.</li>
+<li>$(\frac{sin\alpha}{\alpha})^2$的调制作用<br>(1)当$\alpha = n\pi$ 或 $asin\theta = n\lambda$ 时取得衍射极小</li>
+<li>缝数N对衍射分布的影响<br>(1)N增加，使各相邻主极大数目增加<br>(2)N增加，使各主极大的强度增强N²倍<br>(3)N增加，各级主极大（条纹）变细变亮<br>主极大角半宽$ \Delta\theta = \frac{\lambda}{Ndcos\theta_m} $</li>
+</ul>
+<h2 id="衍射光栅"><a href="#衍射光栅" class="headerlink" title="衍射光栅"></a>衍射光栅</h2><h3 id="光栅的分光性能"><a href="#光栅的分光性能" class="headerlink" title="光栅的分光性能"></a>光栅的分光性能</h3><ul>
+<li>光栅方程：$d(sini\pm sin\theta) = m\lambda$(与法线同侧取正，异侧取负)</li>
+<li>光栅的色散：不同波长的同级主极大对应不同的衍射角的现象<br>(1)角色散：表示波长相差0.1nm的两条谱线分开的角距离<br>$\frac{d\theta}{d\lambda} = \frac{m}{dcos\theta}$<br>(2)线色散：波长相差0.1nm的两谱线在焦面上分开的线距离<br>$\frac{dl}{d\lambda} = f\frac{m}{dcos\theta}$<br>(3)匀排光谱：色散是均匀的光栅光谱（θ角不大时，视Cosθ不随θ而变）</li>
+<li>光栅的分辨本领<br>$A = \frac{\lambda}{\Delta\lambda} = mN$</li>
+<li>光栅的自由光谱区<br>$\Delta\lambda = \frac{\lambda}{m}$</li>
+</ul>
+<h3 id="正弦-振幅-光栅"><a href="#正弦-振幅-光栅" class="headerlink" title="正弦(振幅)光栅"></a>正弦(振幅)光栅</h3><h3 id="闪耀光栅"><a href="#闪耀光栅" class="headerlink" title="闪耀光栅"></a>闪耀光栅</h3><ul>
+<li>入射光沿光栅面法线方向,$ dsin2\gamma = m\lambda $</li>
+<li>入射光沿刻痕面法线方向,$ 2dsin\gamma = m\lambda $</li>
+</ul>
+<h3 id="阶梯光栅"><a href="#阶梯光栅" class="headerlink" title="阶梯光栅"></a>阶梯光栅</h3><h3 id="体光栅"><a href="#体光栅" class="headerlink" title="体光栅"></a>体光栅</h3><h2 id="二元光学元件"><a href="#二元光学元件" class="headerlink" title="二元光学元件"></a>二元光学元件</h2>]]></content>
       <categories>
         <category>学习所悟</category>
       </categories>
