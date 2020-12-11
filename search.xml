@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>这是我的第一篇博客，随便写写</title>
+    <url>/2020/11/28/newpapername/</url>
+    <content><![CDATA[<p>&emsp;&emsp;考研复习阶段觉得每日重复的事情过于琐碎，于是新奇开通此博客记录一下生活</p>
+]]></content>
+      <categories>
+        <category>生活感想</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>游戏王数字盒10期HR卡全鉴赏</title>
     <url>/2020/11/29/10HR/</url>
     <content><![CDATA[<p>&emsp;&emsp;今天遇到周日，更新一篇博客，把收藏已久的游戏王数字盒10期HR卡发出来给大家欣赏一下！！！<br><a id="more"></a><br>图片可能有点拍的不好，以后有机会重新贴下图，谢谢各位朋友的围观！！！</p>
@@ -63,15 +75,73 @@
       </tags>
   </entry>
   <entry>
-    <title>这是我的第一篇博客，随便写写</title>
-    <url>/2020/11/28/newpapername/</url>
-    <content><![CDATA[<p>&emsp;&emsp;考研复习阶段觉得每日重复的事情过于琐碎，于是新奇开通此博客记录一下生活</p>
-]]></content>
+    <title>物理光学——光的衍射</title>
+    <url>/2020/11/30/opt2/</url>
+    <content><![CDATA[<p>&emsp;&emsp;本章重点为典型的夫朗和费衍射系统和光栅部分<br><a id="more"></a><br>等有空有机会把图贴上<br>&emsp;&emsp;该部分《841工程光学基础》考纲内容如下</p>
+<blockquote>
+<p>熟练掌握典型的夫朗和费衍射系统概念和计算；掌握闪耀光栅的原理和计算；衍射极限的概念及在典型光学系统设计中的运用；夫朗和费衍射与傅立叶变换的关系；菲涅耳波带片的概念和使用。</p>
+</blockquote>
+<h2 id="光波衍射理论"><a href="#光波衍射理论" class="headerlink" title="光波衍射理论"></a>光波衍射理论</h2><h3 id="光的衍射现象"><a href="#光的衍射现象" class="headerlink" title="光的衍射现象"></a>光的衍射现象</h3><h3 id="惠更斯-菲涅尔原理"><a href="#惠更斯-菲涅尔原理" class="headerlink" title="惠更斯-菲涅尔原理"></a>惠更斯-菲涅尔原理</h3><h3 id="菲涅尔-基尔霍夫衍射公式"><a href="#菲涅尔-基尔霍夫衍射公式" class="headerlink" title="菲涅尔-基尔霍夫衍射公式"></a>菲涅尔-基尔霍夫衍射公式</h3><h3 id="巴比涅原理"><a href="#巴比涅原理" class="headerlink" title="巴比涅原理"></a>巴比涅原理</h3><h3 id="基尔霍夫衍射公式的近似"><a href="#基尔霍夫衍射公式的近似" class="headerlink" title="基尔霍夫衍射公式的近似"></a>基尔霍夫衍射公式的近似</h3><h2 id="菲涅尔衍射"><a href="#菲涅尔衍射" class="headerlink" title="菲涅尔衍射"></a>菲涅尔衍射</h2><h3 id="菲涅尔波带法"><a href="#菲涅尔波带法" class="headerlink" title="菲涅尔波带法"></a>菲涅尔波带法</h3><ul>
+<li>以$P_0$点为中心，半径分别为$z_1,z_1+\frac{\lambda}{2},z_1+\lambda,…z_1+\frac{j\lambda}{2}$作球面，与$\Sigma$相交成圆，将$\Sigma$划分为各个环带<br>其中每个环带对$P_0$点产生的振幅可以表示为<br>$|\tilde{E_j}| = C\frac{A_j}{r_j}\frac{1+cos\theta}{2}$<br>由于$A_j$为两个相邻圆面积之差，大约为常数 $\pi z_1\lambda$</li>
+<li>各波带在$ P_0 $点产生的复振幅总和<br>$ \tilde{E} = |\tilde{E_1}| - |\tilde{E_2}| + |\tilde{E_3}|+…-(-1)^n|\tilde{E_n}|$<br>近似有$|\tilde{E_2}| = |\tilde{E_1}|/2 + |\tilde{E_3}|/2$, $|\tilde{E_4}| = |\tilde{E_3}|/2 + |\tilde{E_5}|/2$,…<br>得到<br>$\tilde{E} = \frac{|\tilde{E_1}|}{2} \pm \frac{|\tilde{E_n}|}{2} $ (n取奇数为+，取偶数为-)<br>由此可见，当n为奇数时$P_0$点强度较大，n为偶数时$P_0$点强度较小，逐渐开大或缩小圆孔，在$P_0$点将可以看到明暗交替的变化</li>
+<li>当圆孔非常大时候，或者不存在圆孔衍射屏时，$ |\tilde{E_n}| = 0 $<br>则$ \tilde{E_\infty} = \frac{\tilde{E_1}}{2} $<br>可见此时$P_0$点复振幅为第一波带产生复振幅的一半</li>
+</ul>
+<h3 id="菲涅尔圆孔衍射"><a href="#菲涅尔圆孔衍射" class="headerlink" title="菲涅尔圆孔衍射"></a>菲涅尔圆孔衍射</h3><h3 id="菲涅尔圆屏衍射"><a href="#菲涅尔圆屏衍射" class="headerlink" title="菲涅尔圆屏衍射"></a>菲涅尔圆屏衍射</h3><h3 id="菲涅尔波带片-菲涅尔透镜"><a href="#菲涅尔波带片-菲涅尔透镜" class="headerlink" title="菲涅尔波带片(菲涅尔透镜)"></a>菲涅尔波带片(菲涅尔透镜)</h3><ul>
+<li>特殊光阑，使得奇数波带畅通无阻，偶数波带完全被阻挡</li>
+<li>例如，包含20个波带的光阑，让奇数波带通过<br>$\tilde{E} = |\tilde{E_1}|  + |\tilde{E_3}|+…+|\tilde{E_19}| \approx 10|\tilde{E_1}| = 20|\tilde{E_\infty}|$<br>结果使光强相对于无光阑时扩大400倍</li>
+<li>第J个波带外圈半径 $\rho = \sqrt{jz_1\lambda}$, 因此波带片焦距$ f = z_1 = \frac{\rho ^2_j}{j\lambda}$</li>
+<li>波带片除了有主焦点$P_0$,还有一系列光强较小的焦点$P_1$，$P_2$,…他们分别距离波带片$f/3, f/5,…$,此外还有很多与实焦点对称的虚焦点</li>
+</ul>
+<h3 id="泰伯效应"><a href="#泰伯效应" class="headerlink" title="泰伯效应"></a>泰伯效应</h3><h2 id="典型孔径夫琅和费衍射"><a href="#典型孔径夫琅和费衍射" class="headerlink" title="典型孔径夫琅和费衍射"></a>典型孔径夫琅和费衍射</h2><h3 id="夫琅和费衍射公式的意义"><a href="#夫琅和费衍射公式的意义" class="headerlink" title="夫琅和费衍射公式的意义"></a>夫琅和费衍射公式的意义</h3><ul>
+<li>夫琅和费衍射公式可以表示为<br>$\tilde{E}(P) = c\iint_\Sigma \tilde{E}(x_1,y_1)exp[-ik(lx_1+\omega y_1)]dx_1 dy_1$<br>$ = c\iint_\Sigma \tilde{E}(x_1,y_1)exp[-i\frac{2\pi}{\lambda f}(xx_1+yy_1)]dx_1 dy_1$</li>
+<li>公式表明<br>(1) P点的复振幅取决于孔径面上所有Q方向衍射光在该点的光程差<br>(2)$\tilde{E}(P) = c\iint_\Sigma \tilde{E}(x_1,y_1)exp[-i2\pi(ux_1+vy_1)]dx_1 dy_1$<br>&emsp;焦面场上的衍射分布就是孔径面上复振幅分布的一个傅立叶变换<br>&emsp;傅立叶变换模拟运算可以用衍射变换实现<br>&emsp;衍射问题可用傅立叶变换方法处理</li>
+</ul>
+<h3 id="矩孔衍射"><a href="#矩孔衍射" class="headerlink" title="矩孔衍射"></a>矩孔衍射</h3><ul>
+<li>强度分布<br>$ I = |\tilde{E}|^2 = I_0(\frac{sin\frac{kla}{2}}{\frac{kla}{2}})^2(\frac{sin\frac{k\omega b}{2}}{\frac{k\omega b}{2}})^2 = I_0(\frac{sin\alpha}{\alpha})^2(\frac{sin\beta}{\beta})^2$<br>其中$\alpha = \frac{kla}{2} = \frac{\pi}{\lambda}asin\theta_x, \beta = \frac{k\omega b}{2} = \frac{\pi}{\lambda}bsin\theta_y$</li>
+<li>衍射图案(分别由x,y轴进行分析)<br>(1)极小位置<br>当 $ \alpha = n\pi $时<br>(2)极大位置<br>当 $ \alpha = 0 $主极大<br>当 $ tan\alpha = \alpha $次级大<br>(3)衍射效应正比入射波长，反比于孔径线度。<br>由于$ sin\theta_x = \frac{n\lambda}{a}$ 条纹角宽度$\Delta\theta_x = \frac{\lambda}{a}$<br>矩孔的夫琅和费衍射图样：中央零级在点源的几何像位置，中央亮斑集中了全部能量的80%。周围是一些x、y方向上等间距的暗线，相邻暗线之间距反比于矩孔线度。</li>
+</ul>
+<h3 id="单缝衍射"><a href="#单缝衍射" class="headerlink" title="单缝衍射"></a>单缝衍射</h3><ul>
+<li>将矩孔衍射一边取极限</li>
+<li>测单缝宽度 </li>
+</ul>
+<h3 id="圆孔的夫琅和费衍射"><a href="#圆孔的夫琅和费衍射" class="headerlink" title="圆孔的夫琅和费衍射"></a>圆孔的夫琅和费衍射</h3><ul>
+<li>强度分布<br>$ I(P) = I_0[\frac{2J_1(Z}{Z}]^2, Z = ka\theta$</li>
+<li>衍射图样<br>(1)圆孔衍射图样是中心明亮，明暗相间的同心圆环，在θ=0（即点源几何像）处强度最大，随θ变化，会出现强度的极大、极小<br>(2)极大、极小值分布不等间距<br>第一极小位置$ Z = 1.22\pi$, 即$\theta = \frac{0.61\lambda}{a} = \frac{1.22\lambda}{D}$ 为艾里斑半径<br>次级大$ J_2(Z) = 0 $<br>(3)衍射效应与孔径线度成反比，与波长成正比</li>
+</ul>
+<h2 id="光学成像系统的衍射和分辨本领"><a href="#光学成像系统的衍射和分辨本领" class="headerlink" title="光学成像系统的衍射和分辨本领"></a>光学成像系统的衍射和分辨本领</h2><h3 id="成像系统的衍射现象"><a href="#成像系统的衍射现象" class="headerlink" title="成像系统的衍射现象"></a>成像系统的衍射现象</h3><h3 id="在像面观察的夫琅和费衍射"><a href="#在像面观察的夫琅和费衍射" class="headerlink" title="在像面观察的夫琅和费衍射"></a>在像面观察的夫琅和费衍射</h3><ul>
+<li>成像系统对近处点物在像面所成的夫琅和费衍射像等价于平面波入射时，在$ f = R$的透镜焦面上产生的孔径夫琅和费衍射分布，这提供一种用会聚光照明在像面得到孔径频谱的方法。</li>
+</ul>
+<h3 id="光学成像系统的分辨率"><a href="#光学成像系统的分辨率" class="headerlink" title="光学成像系统的分辨率"></a>光学成像系统的分辨率</h3><ul>
+<li>瑞利判据：当一个点物衍射图样的中央极大刚好为另一个点物衍射图样的第一极小时，认为此时两点物可分辨。</li>
+<li>典型光学系统的分辨本领<br>(1)人眼的最小可分辨角$ \alpha = \frac{1.22\lambda}{d} $<br>(2)望远物镜最小可分辨角$ \alpha = \theta =  \frac{1.22\lambda}{D} $<br>(3)照相物镜分辨本领$ N = \frac{D}{1.22\lambda f} $(底片上每毫米可分辨的线条数)<br>(4)显微物镜的最小可分辨距$ \varepsilon = \frac{0.61\lambda}{n\sin u}$</li>
+</ul>
+<h2 id="多缝的夫琅和费衍射"><a href="#多缝的夫琅和费衍射" class="headerlink" title="多缝的夫琅和费衍射"></a>多缝的夫琅和费衍射</h2><h3 id="多缝的强度分布公式"><a href="#多缝的强度分布公式" class="headerlink" title="多缝的强度分布公式"></a>多缝的强度分布公式</h3><ul>
+<li>$ I(P) = I_0(\frac{sin\alpha}{\alpha})^2(\frac{sin\frac{N\delta}{2}}{sin\frac{\delta}{2}})^2$<br>其中$\alpha = \frac{kla}{2}$ 或 $ asin\theta = n\lambda$<br>&emsp;&emsp;$\delta = \frac{2\pi}{\lambda}dsin\theta$ 或 $dsin\theta = m\lambda $</li>
+<li>该式包含单缝单缝衍射和多缝干涉</li>
+</ul>
+<h3 id="多缝衍射图样的特征"><a href="#多缝衍射图样的特征" class="headerlink" title="多缝衍射图样的特征"></a>多缝衍射图样的特征</h3><ul>
+<li>由$(\frac{sin\frac{N\delta}{2}}{sin\frac{\delta}{2}})^2$取干涉极大极小值位置<br>(1)当$\delta = 2m\pi$ 或 $ dsin\theta = m\lambda $ 时出现干涉主极大，且强度为单缝时的$N^2$倍<br>(2)当$ \delta = \frac{2m\pi}{N}$ 或 $ dsin\theta = (m + \frac{m’}{N})\lambda$时出现干涉极小值<br>(3)相邻两个极小值间有一次极大，因而相邻两主极大间有(N－1)个极小值，(N－2)个次极大.</li>
+<li>$(\frac{sin\alpha}{\alpha})^2$的调制作用<br>(1)当$\alpha = n\pi$ 或 $asin\theta = n\lambda$ 时取得衍射极小</li>
+<li>缝数N对衍射分布的影响<br>(1)N增加，使各相邻主极大数目增加<br>(2)N增加，使各主极大的强度增强N²倍<br>(3)N增加，各级主极大（条纹）变细变亮<br>主极大角半宽$ \Delta\theta = \frac{\lambda}{Ndcos\theta_m} $</li>
+</ul>
+<h2 id="衍射光栅"><a href="#衍射光栅" class="headerlink" title="衍射光栅"></a>衍射光栅</h2><h3 id="光栅的分光性能"><a href="#光栅的分光性能" class="headerlink" title="光栅的分光性能"></a>光栅的分光性能</h3><ul>
+<li>光栅方程：$d(sini\pm sin\theta) = m\lambda$(与法线同侧取正，异侧取负)</li>
+<li>光栅的色散：不同波长的同级主极大对应不同的衍射角的现象<br>(1)角色散：表示波长相差0.1nm的两条谱线分开的角距离<br>$\frac{d\theta}{d\lambda} = \frac{m}{dcos\theta}$<br>(2)线色散：波长相差0.1nm的两谱线在焦面上分开的线距离<br>$\frac{dl}{d\lambda} = f\frac{m}{dcos\theta}$<br>(3)匀排光谱：色散是均匀的光栅光谱（θ角不大时，视Cosθ不随θ而变）</li>
+<li>光栅的分辨本领<br>$A = \frac{\lambda}{\Delta\lambda} = mN$</li>
+<li>光栅的自由光谱区<br>$\Delta\lambda = \frac{\lambda}{m}$</li>
+</ul>
+<h3 id="正弦-振幅-光栅"><a href="#正弦-振幅-光栅" class="headerlink" title="正弦(振幅)光栅"></a>正弦(振幅)光栅</h3><h3 id="闪耀光栅"><a href="#闪耀光栅" class="headerlink" title="闪耀光栅"></a>闪耀光栅</h3><ul>
+<li>入射光沿光栅面法线方向,$ dsin2\gamma = m\lambda $</li>
+<li>入射光沿刻痕面法线方向,$ 2dsin\gamma = m\lambda $</li>
+</ul>
+<h3 id="阶梯光栅"><a href="#阶梯光栅" class="headerlink" title="阶梯光栅"></a>阶梯光栅</h3><h3 id="体光栅"><a href="#体光栅" class="headerlink" title="体光栅"></a>体光栅</h3><h2 id="二元光学元件"><a href="#二元光学元件" class="headerlink" title="二元光学元件"></a>二元光学元件</h2>]]></content>
       <categories>
-        <category>生活感想</category>
+        <category>学习所悟</category>
       </categories>
       <tags>
-        <tag>生活</tag>
+        <tag>学习</tag>
+        <tag>光学</tag>
+        <tag>物理光学</tag>
       </tags>
   </entry>
   <entry>
@@ -211,37 +281,55 @@
       </tags>
   </entry>
   <entry>
-    <title>考研倒计时26！加油考研人！</title>
-    <url>/2020/11/29/study1/</url>
-    <content><![CDATA[<p>&emsp;&emsp;考研最后26天了，每日出了大量的刷题，记忆阶段也不能落下，政治英语每日提分背诵来了！<br><a id="more"></a></p>
-<h2 id="政治每日背诵"><a href="#政治每日背诵" class="headerlink" title="政治每日背诵"></a>政治每日背诵</h2><h3 id="对外开放的措施（毛中特部分分析题）"><a href="#对外开放的措施（毛中特部分分析题）" class="headerlink" title="对外开放的措施（毛中特部分分析题）"></a>对外开放的措施（毛中特部分分析题）</h3><ul>
-<li>推动全面开放，要以“一带一路”建设为重点，坚持“引进来”和“走出去”并重，遵循共商共建共享原则，加强创新能力开放合作，形成陆海内外联动、东西双向互济的开放格局。坚持公平开放、共赢开放、包容开放，构建公平竞争的内外资发展环境，推动经济全球化朝着普惠共赢方向发展，探索求同存异、包容共生的国际合作新途径。中国对外开放，不是要一家唱独角戏，而是要欢迎各方共同参与；不是要谋求势力范围，而是要支持各国共同发展；不是要营造自己的后花园，而是要建设各国共享的百花园。2019年4月26日，总书记在第二届“一带一路”国际合作高峰论坛开幕式上的主旨演讲指出，“中国将采取一系列重大改革开放举措，加强制度性、结构性安排，促进更高水平对外开放”。具体要做到以下几点：第一，更广领域扩大外资市场准入；第二，更大力度加强知识产权保护国际合作；第三，更大规模增加商品和服务进口；第四，更加有效实施国际宏观经济政策协调；第五，更加重视对外开放政策贯彻落实。  </li>
-<li>建设更高水平开放型经济新体制。</li>
-<li>开放型世界经济的首要之义是反对保护主义。</li>
-<li>今日之中国，不仅是中国之中国，而且是世界之中国。未来之中国，必将以更加开放的姿态拥抱世界，必将同世界形成更加良性的互动，带来更加进步和繁荣的中国和世界。</li>
-</ul>
-<h2 id="英语每日作文背诵"><a href="#英语每日作文背诵" class="headerlink" title="英语每日作文背诵"></a>英语每日作文背诵</h2><h3 id="建议信（英一小作文）"><a href="#建议信（英一小作文）" class="headerlink" title="建议信（英一小作文）"></a>建议信（英一小作文）</h3><p>Dear  Professor Byron,<br>&emsp;&emsp;Last week you asked students to write and give you feedback on your lectures. Therefore, I have outlined my thoughts below.<br>&emsp;&emsp;In general, I find your lectures very informative and inspiring. Indeed, I particularly like the way you demonstrate complex issues with the use of simple drawings. This makes your lessons both interesting and memorable. However, I do feel that you could provide us with more handouts, for I often fail to take down all the important points as time is limited. I would also like to see more discussion work, as I find this method the most suitable way to clarify and deepen my understanding of the subject content.<br>&emsp;&emsp;I’d like to thank you for the interest you are taking in us students and look forward to your next lecture.</p>
-<p align="right">Yours sincerely,</p>
-<p align="right">Li Ming</p>
-
-<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>&emsp;&emsp;以上内容选自徐涛老师微信公众号和王江涛老师英语必备范文。</p>
-]]></content>
-      <categories>
-        <category>学习所悟</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>考研</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>物理光学——傅里叶光学（持续更新中）</title>
-    <url>/2020/12/01/opt3/</url>
-    <content><![CDATA[<a id="more"></a>
-<p>&emsp;&emsp;该部分《841工程光学基础》考纲内容如下</p>
+    <title>应用光学——光能及其传播计算</title>
+    <url>/2020/12/11/opt7/</url>
+    <content><![CDATA[<p>&emsp;&emsp;本章内容在考试中涉及较少<br><a id="more"></a><br>&emsp;&emsp;该部分《841工程光学基础》考纲内容如下</p>
 <blockquote>
-<p>熟练掌握电磁场叠加以及空间频率的概念；掌握4F系统光学系统用于光学信息处理的概念和过程；相干光学系统和非相干光学系统对成像影响的结论和运用；空间滤波的概念及简单计算。</p>
+<p>熟练掌握光度学各物理量的意义和国际标准量纲体系，掌握光学系统传输光能的特征</p>
 </blockquote>
+<h2 id="辐射能通量，光通量"><a href="#辐射能通量，光通量" class="headerlink" title="辐射能通量，光通量"></a>辐射能通量，光通量</h2><h3 id="辐射量"><a href="#辐射量" class="headerlink" title="辐射量"></a>辐射量</h3><h3 id="光谱光视效率（视见函数）"><a href="#光谱光视效率（视见函数）" class="headerlink" title="光谱光视效率（视见函数）"></a>光谱光视效率（视见函数）</h3><ul>
+<li>人眼对555nm的黄光最灵敏</li>
+<li>$V_{\lambda} = \frac{K_{lambda}}{K_{555}}$</li>
+<li>可见光范围400-760nm</li>
+</ul>
+<h3 id="光通量与发光效率"><a href="#光通量与发光效率" class="headerlink" title="光通量与发光效率"></a>光通量与发光效率</h3><ul>
+<li>光通量——是辐射能通量的光量度，即若干辐射能相当于多少光</li>
+<li>发光效率——辐射体（光源）发出的总光通量与总辐射能通量之比</li>
+</ul>
+<h2 id="发光强度，光照度，光出射度和光亮度"><a href="#发光强度，光照度，光出射度和光亮度" class="headerlink" title="发光强度，光照度，光出射度和光亮度"></a>发光强度，光照度，光出射度和光亮度</h2><h3 id="发光强度——描述点光源的发光特性"><a href="#发光强度——描述点光源的发光特性" class="headerlink" title="发光强度——描述点光源的发光特性"></a>发光强度——描述点光源的发光特性</h3><ul>
+<li>$ I = \frac{d\Phi}{d\omega}$<br>空间立体角$ \omega = 4\pi$<br>当光源在各个方向上发光强度相同时$ \Phi = 4\pi I_0$</li>
+<li>单位：坎德拉(光度学的基本单位)<br>$1 cd = 1 lm/1 sr$</li>
+</ul>
+<h3 id="光照度——光源发出的光投射到某表面，该表面上的亮暗程度定义为单位面积上得到的光通量"><a href="#光照度——光源发出的光投射到某表面，该表面上的亮暗程度定义为单位面积上得到的光通量" class="headerlink" title="光照度——光源发出的光投射到某表面，该表面上的亮暗程度定义为单位面积上得到的光通量"></a>光照度——光源发出的光投射到某表面，该表面上的亮暗程度定义为单位面积上得到的光通量</h3><ul>
+<li>$ E = \frac{d\Phi}{d\S}$</li>
+<li>单位：勒克斯<br>$1 Lx = 1 lm/m^2 = 1 cd\dot sr/m^2$</li>
+<li>当点光源直接照明某个面积有：<br>$ E = \frac{I}{R^2}cosi$<br><img src="https://arkimg.oss-cn-hangzhou.aliyuncs.com/%E5%BA%94%E7%94%A8%E5%85%89%E5%AD%A6/%E7%AC%AC%E5%85%AD%E7%AB%A0/1.png" alt="图1"></li>
+</ul>
+<h3 id="光出射度——描述面光源的发光特性，定义为发光表面单位面积上发出的光通量"><a href="#光出射度——描述面光源的发光特性，定义为发光表面单位面积上发出的光通量" class="headerlink" title="光出射度——描述面光源的发光特性，定义为发光表面单位面积上发出的光通量"></a>光出射度——描述面光源的发光特性，定义为发光表面单位面积上发出的光通量</h3><ul>
+<li>$ M = \frac{d\Phi}{d\S}$</li>
+<li>单位：与光照度相同，均为勒克斯</li>
+<li>区别：光照度是表面接收，光出射度是表面发出</li>
+<li>与自身的透射或反射率有关<br>$ M = \rho E$<br>$\rho-&gt;1$白体，$\rho-&gt;0$黑体</li>
+</ul>
+<h3 id="光亮度——描述有限大小光源的发光特性"><a href="#光亮度——描述有限大小光源的发光特性" class="headerlink" title="光亮度——描述有限大小光源的发光特性"></a>光亮度——描述有限大小光源的发光特性</h3><ul>
+<li>$ L_i = \frac{I}{cosi\dot dS}$</li>
+<li>单位：尼特<br>$ 1 nt = 1 cd/m^2 $<br><img src="https://arkimg.oss-cn-hangzhou.aliyuncs.com/%E5%BA%94%E7%94%A8%E5%85%89%E5%AD%A6/%E7%AC%AC%E5%85%AD%E7%AB%A0/2.png" alt="图2"></li>
+<li>某些光源，L不随方向变，此时 I 随方向变，成为余弦辐射体</li>
+</ul>
+<h2 id="光传播过程中光学量的变化规律"><a href="#光传播过程中光学量的变化规律" class="headerlink" title="光传播过程中光学量的变化规律"></a>光传播过程中光学量的变化规律</h2><h3 id="点光源照明距离为R的表面时形成的照度——参见光照度"><a href="#点光源照明距离为R的表面时形成的照度——参见光照度" class="headerlink" title="点光源照明距离为R的表面时形成的照度——参见光照度"></a>点光源照明距离为R的表面时形成的照度——参见光照度</h3><h3 id="光亮度在同一介质中的传递"><a href="#光亮度在同一介质中的传递" class="headerlink" title="光亮度在同一介质中的传递"></a>光亮度在同一介质中的传递</h3><ul>
+<li>光在同一介质中传播，忽略散射及吸收，则在传播中的任一截面上，光通量与亮度不变。光束的亮度就是光源的亮度。</li>
+</ul>
+<h3 id="光束经界面反射和折射后的亮度"><a href="#光束经界面反射和折射后的亮度" class="headerlink" title="光束经界面反射和折射后的亮度"></a>光束经界面反射和折射后的亮度</h3><ul>
+<li>反射光束：$L’’ = \rho L$</li>
+<li>折射光束：$L’ = (1-\rho)L\frac{n’^2}{n}$</li>
+</ul>
+<h2 id="光学系统光能损失的计算"><a href="#光学系统光能损失的计算" class="headerlink" title="光学系统光能损失的计算"></a>光学系统光能损失的计算</h2><ul>
+<li>反射损失：光学零件与空气接触面($\rho$), 胶合面——n与 n’差不多(可略), 漫反射、散射、多次反射——杂散光，应改善材料及加工质量</li>
+<li>折射损失：在空气中的吸收(可略), 在光学零件中的吸收($1-\tau$)</li>
+</ul>
+<h2 id="成像光学系统像面的照度"><a href="#成像光学系统像面的照度" class="headerlink" title="成像光学系统像面的照度"></a>成像光学系统像面的照度</h2><h3 id="通过光学系统的光通量"><a href="#通过光学系统的光通量" class="headerlink" title="通过光学系统的光通量"></a>通过光学系统的光通量</h3><p>$\Phi = \pi LdSsin^2U$<br><img src="https://arkimg.oss-cn-hangzhou.aliyuncs.com/%E5%BA%94%E7%94%A8%E5%85%89%E5%AD%A6/%E7%AC%AC%E5%85%AD%E7%AB%A0/3.png" alt="图3"><br>如果系统的透过率为K，则出瞳的光通量$\Phi’ = K\pi LdSsin^2U$<br>从像面考虑$\Phi’ = \pi L’ dS’ sin^2U’$</p>
+<h3 id="轴上像点的光照度"><a href="#轴上像点的光照度" class="headerlink" title="轴上像点的光照度"></a>轴上像点的光照度</h3><p>$E = \pi KL\dot sin^2U\frac{1}{\beta^2} $<br>光学系统孔径越大，像面照度越大，系统放大倍率越小，像面照度越大</p>
+<h3 id="轴外点的光照度"><a href="#轴外点的光照度" class="headerlink" title="轴外点的光照度"></a>轴外点的光照度</h3><p>$E_w = E\dot cos^4W’$<br>轴外点的光照度随视场角的增大而显著下降</p>
 ]]></content>
       <categories>
         <category>学习所悟</category>
@@ -249,70 +337,94 @@
       <tags>
         <tag>学习</tag>
         <tag>光学</tag>
-        <tag>物理光学</tag>
+        <tag>应用光学</tag>
       </tags>
   </entry>
   <entry>
-    <title>物理光学——光的衍射</title>
-    <url>/2020/11/30/opt2/</url>
-    <content><![CDATA[<p>&emsp;&emsp;本章重点为典型的夫朗和费衍射系统和光栅部分<br><a id="more"></a><br>等有空有机会把图贴上<br>&emsp;&emsp;该部分《841工程光学基础》考纲内容如下</p>
+    <title>物理光学——傅里叶光学</title>
+    <url>/2020/12/01/opt3/</url>
+    <content><![CDATA[<p>&emsp;&emsp;大致更新完成<br><a id="more"></a><br>&emsp;&emsp;该部分《841工程光学基础》考纲内容如下</p>
 <blockquote>
-<p>熟练掌握典型的夫朗和费衍射系统概念和计算；掌握闪耀光栅的原理和计算；衍射极限的概念及在典型光学系统设计中的运用；夫朗和费衍射与傅立叶变换的关系；菲涅耳波带片的概念和使用。</p>
+<p>熟练掌握电磁场叠加以及空间频率的概念；掌握4F系统光学系统用于光学信息处理的概念和过程；相干光学系统和非相干光学系统对成像影响的结论和运用；空间滤波的概念及简单计算。</p>
 </blockquote>
-<h2 id="光波衍射理论"><a href="#光波衍射理论" class="headerlink" title="光波衍射理论"></a>光波衍射理论</h2><h3 id="光的衍射现象"><a href="#光的衍射现象" class="headerlink" title="光的衍射现象"></a>光的衍射现象</h3><h3 id="惠更斯-菲涅尔原理"><a href="#惠更斯-菲涅尔原理" class="headerlink" title="惠更斯-菲涅尔原理"></a>惠更斯-菲涅尔原理</h3><h3 id="菲涅尔-基尔霍夫衍射公式"><a href="#菲涅尔-基尔霍夫衍射公式" class="headerlink" title="菲涅尔-基尔霍夫衍射公式"></a>菲涅尔-基尔霍夫衍射公式</h3><h3 id="巴比涅原理"><a href="#巴比涅原理" class="headerlink" title="巴比涅原理"></a>巴比涅原理</h3><h3 id="基尔霍夫衍射公式的近似"><a href="#基尔霍夫衍射公式的近似" class="headerlink" title="基尔霍夫衍射公式的近似"></a>基尔霍夫衍射公式的近似</h3><h2 id="菲涅尔衍射"><a href="#菲涅尔衍射" class="headerlink" title="菲涅尔衍射"></a>菲涅尔衍射</h2><h3 id="菲涅尔波带法"><a href="#菲涅尔波带法" class="headerlink" title="菲涅尔波带法"></a>菲涅尔波带法</h3><ul>
-<li>以$P_0$点为中心，半径分别为$z_1,z_1+\frac{\lambda}{2},z_1+\lambda,…z_1+\frac{j\lambda}{2}$作球面，与$\Sigma$相交成圆，将$\Sigma$划分为各个环带<br>其中每个环带对$P_0$点产生的振幅可以表示为<br>$|\tilde{E_j}| = C\frac{A_j}{r_j}\frac{1+cos\theta}{2}$<br>由于$A_j$为两个相邻圆面积之差，大约为常数 $\pi z_1\lambda$</li>
-<li>各波带在$ P_0 $点产生的复振幅总和<br>$ \tilde{E} = |\tilde{E_1}| - |\tilde{E_2}| + |\tilde{E_3}|+…-(-1)^n|\tilde{E_n}|$<br>近似有$|\tilde{E_2}| = |\tilde{E_1}|/2 + |\tilde{E_3}|/2$, $|\tilde{E_4}| = |\tilde{E_3}|/2 + |\tilde{E_5}|/2$,…<br>得到<br>$\tilde{E} = \frac{|\tilde{E_1}|}{2} \pm \frac{|\tilde{E_n}|}{2} $ (n取奇数为+，取偶数为-)<br>由此可见，当n为奇数时$P_0$点强度较大，n为偶数时$P_0$点强度较小，逐渐开大或缩小圆孔，在$P_0$点将可以看到明暗交替的变化</li>
-<li>当圆孔非常大时候，或者不存在圆孔衍射屏时，$ |\tilde{E_n}| = 0 $<br>则$ \tilde{E_\infty} = \frac{\tilde{E_1}}{2} $<br>可见此时$P_0$点复振幅为第一波带产生复振幅的一半</li>
+<h2 id="平面波的复振幅分布和空间频率"><a href="#平面波的复振幅分布和空间频率" class="headerlink" title="平面波的复振幅分布和空间频率"></a>平面波的复振幅分布和空间频率</h2><h3 id="光场中任一平面上的复振幅分布"><a href="#光场中任一平面上的复振幅分布" class="headerlink" title="光场中任一平面上的复振幅分布"></a>光场中任一平面上的复振幅分布</h3><ul>
+<li>空间复振幅分布 $ \tilde{E}(x,y,z) = Aexp[ik(xcos\alpha + ycos\beta + zcos\gamma)] $</li>
+<li>令$z = z_0$ 则可以得到 $ \tilde{E}(x,y) = A’exp[i\frac{2\pi}{\lambda}(xcos\alpha + ycos\beta)] $</li>
 </ul>
-<h3 id="菲涅尔圆孔衍射"><a href="#菲涅尔圆孔衍射" class="headerlink" title="菲涅尔圆孔衍射"></a>菲涅尔圆孔衍射</h3><h3 id="菲涅尔圆屏衍射"><a href="#菲涅尔圆屏衍射" class="headerlink" title="菲涅尔圆屏衍射"></a>菲涅尔圆屏衍射</h3><h3 id="菲涅尔波带片-菲涅尔透镜"><a href="#菲涅尔波带片-菲涅尔透镜" class="headerlink" title="菲涅尔波带片(菲涅尔透镜)"></a>菲涅尔波带片(菲涅尔透镜)</h3><ul>
-<li>特殊光阑，使得奇数波带畅通无阻，偶数波带完全被阻挡</li>
-<li>例如，包含20个波带的光阑，让奇数波带通过<br>$\tilde{E} = |\tilde{E_1}|  + |\tilde{E_3}|+…+|\tilde{E_19}| \approx 10|\tilde{E_1}| = 20|\tilde{E_\infty}|$<br>结果使光强相对于无光阑时扩大400倍</li>
-<li>第J个波带外圈半径 $\rho = \sqrt{jz_1\lambda}$, 因此波带片焦距$ f = z_1 = \frac{\rho ^2_j}{j\lambda}$</li>
-<li>波带片除了有主焦点$P_0$,还有一系列光强较小的焦点$P_1$，$P_2$,…他们分别距离波带片$f/3, f/5,…$,此外还有很多与实焦点对称的虚焦点</li>
+<h3 id="复振幅分布的空间频率及物理意义"><a href="#复振幅分布的空间频率及物理意义" class="headerlink" title="复振幅分布的空间频率及物理意义"></a>复振幅分布的空间频率及物理意义</h3><ul>
+<li>空间频率 $ u = \frac{cos\alpha}{\lambda} = \frac{sin\theta_x}{\lambda}, v = \frac{cos\beta}{\lambda} = \frac{sin\theta_y}{\lambda}$<br>则 $ \tilde{E}(x,y) = A’exp[i2\pi(ux + vy)] $</li>
+<li>空间频率的意义<br>(1)空间频率表示复振幅分布的周期性<br>(2)<br>(3)光波场某一平面上的复振幅分布可以分解成许多不同基本周期分布，则表明包含着许多不同的（u,v）成分，对应着许多不同方向$(cos\alpha,cos\beta)$传播的平面波<br>(4)（u,v）也可以表示不同强度分布的空间周期性</li>
 </ul>
-<h3 id="泰伯效应"><a href="#泰伯效应" class="headerlink" title="泰伯效应"></a>泰伯效应</h3><h2 id="典型孔径夫琅和费衍射"><a href="#典型孔径夫琅和费衍射" class="headerlink" title="典型孔径夫琅和费衍射"></a>典型孔径夫琅和费衍射</h2><h3 id="夫琅和费衍射公式的意义"><a href="#夫琅和费衍射公式的意义" class="headerlink" title="夫琅和费衍射公式的意义"></a>夫琅和费衍射公式的意义</h3><ul>
-<li>夫琅和费衍射公式可以表示为<br>$\tilde{E}(P) = c\iint_\Sigma \tilde{E}(x_1,y_1)exp[-ik(lx_1+\omega y_1)]dx_1 dy_1$<br>$ = c\iint_\Sigma \tilde{E}(x_1,y_1)exp[-i\frac{2\pi}{\lambda f}(xx_1+yy_1)]dx_1 dy_1$</li>
-<li>公式表明<br>(1) P点的复振幅取决于孔径面上所有Q方向衍射光在该点的光程差<br>(2)$\tilde{E}(P) = c\iint_\Sigma \tilde{E}(x_1,y_1)exp[-i2\pi(ux_1+vy_1)]dx_1 dy_1$<br>&emsp;焦面场上的衍射分布就是孔径面上复振幅分布的一个傅立叶变换<br>&emsp;傅立叶变换模拟运算可以用衍射变换实现<br>&emsp;衍射问题可用傅立叶变换方法处理</li>
+<h3 id="复杂复振幅按-u-v-的分解"><a href="#复杂复振幅按-u-v-的分解" class="headerlink" title="复杂复振幅按(u,v)的分解"></a>复杂复振幅按(u,v)的分解</h3><ul>
+<li>$\tilde{E}(x,y) = \iint\tilde{E}(u,v)exp[i2\pi(ux+vy))]dudv, \tilde{E}(x,y) = F^-1{\tilde{E}(u,v)}$</li>
+<li>$\tilde{E}(u,v) = \iint\tilde{E}(x,y)exp[-i2\pi(ux+vy))]dudv,<br>\tilde{E}(u,v) = F{\tilde{E}(x,y)}$</li>
 </ul>
-<h3 id="矩孔衍射"><a href="#矩孔衍射" class="headerlink" title="矩孔衍射"></a>矩孔衍射</h3><ul>
-<li>强度分布<br>$ I = |\tilde{E}|^2 = I_0(\frac{sin\frac{kla}{2}}{\frac{kla}{2}})^2(\frac{sin\frac{k\omega b}{2}}{\frac{k\omega b}{2}})^2 = I_0(\frac{sin\alpha}{\alpha})^2(\frac{sin\beta}{\beta})^2$<br>其中$\alpha = \frac{kla}{2} = \frac{\pi}{\lambda}asin\theta_x, \beta = \frac{k\omega b}{2} = \frac{\pi}{\lambda}bsin\theta_y$</li>
-<li>衍射图案(分别由x,y轴进行分析)<br>(1)极小位置<br>当 $ \alpha = n\pi $时<br>(2)极大位置<br>当 $ \alpha = 0 $主极大<br>当 $ tan\alpha = \alpha $次级大<br>(3)衍射效应正比入射波长，反比于孔径线度。<br>由于$ sin\theta_x = \frac{n\lambda}{a}$ 条纹角宽度$\Delta\theta_x = \frac{\lambda}{a}$<br>矩孔的夫琅和费衍射图样：中央零级在点源的几何像位置，中央亮斑集中了全部能量的80%。周围是一些x、y方向上等间距的暗线，相邻暗线之间距反比于矩孔线度。</li>
+<h2 id="衍射现象的傅里叶分析方法"><a href="#衍射现象的傅里叶分析方法" class="headerlink" title="衍射现象的傅里叶分析方法"></a>衍射现象的傅里叶分析方法</h2><h3 id="夫琅和费近似下衍射场与孔径场的傅立叶变换关系"><a href="#夫琅和费近似下衍射场与孔径场的傅立叶变换关系" class="headerlink" title="夫琅和费近似下衍射场与孔径场的傅立叶变换关系"></a>夫琅和费近似下衍射场与孔径场的傅立叶变换关系</h3><ul>
+<li>$\tilde{E}(x,y) = \tilde{E}(u,v) = F{\tilde{E}(x,y)}, u = \frac{x}{\lambda z_1} v = \frac{y}{\lambda z_1}$<br>可以表示<br>(1)衍射场的分布只须对孔径面复振幅分布做一个傅氏变换求取<br>(2)焦面场（衍射场）上是不同方向传播的平面波的一个频谱分布，焦面即为频谱面</li>
 </ul>
-<h3 id="单缝衍射"><a href="#单缝衍射" class="headerlink" title="单缝衍射"></a>单缝衍射</h3><ul>
-<li>将矩孔衍射一边取极限</li>
-<li>测单缝宽度 </li>
+<h3 id="夫琅和费衍射举例"><a href="#夫琅和费衍射举例" class="headerlink" title="夫琅和费衍射举例"></a>夫琅和费衍射举例</h3><ul>
+<li>矩孔和单缝衍射<br>$\tilde{E}(x_1,y_1) = \tilde{E_0}(x_1,y_1)\tilde{t}(x_1,y_1) = rect(\frac{x_1}{a}) rect(\frac{y_1}{b}) $<br>$\tilde{E}(u,v) = F{\tilde{E}(x_1,y_1)} = abSinc(au)Sinc(bv)$<br>$I(x,y) = |\tilde{E}(u,v)|^2 = I_0 Sinc^2(\frac{ax}{\lambda z_1})Sinc(\frac{by}{\lambda z_1})$<br>傅里叶变换相似定理<br>$F{\tilde{E}(mx,ny)} = \frac{1}{mn}\tilde{E}(\frac{u}{m},\frac{v}{n})$</li>
+<li>双缝衍射<br>傅里叶变换的相移定理<br>$F{\tilde{E}(x-a,y-b)} = \tilde{E}(u,v)exp[-i2\pi(ua+vb)]$<br>$\tilde{E}(x_1) = rect(\frac{x_1-\frac{d}{2}}{a}) + rect(\frac{x_1+\frac{d}{2}}{a})$<br>$\tilde{E}(x) = F{\tilde{E}(x_1)} = F{rect(\frac{x_1}{a})}exp[-i2\pi u(-\frac{d}{2})] + F{rect(\frac{x_1}{a})}exp[-i2\pi u(\frac{d}{2})] $<br>$ = 2acos(\pi ud)Sinc(au) = 2aSinc(\frac{ax}{\lambda z_1})cos(\frac{\pi ud}{\lambda z_1}) $</li>
+<li>正弦光栅<br>无限长度时$ \tilde{t}(x_1) = 1 + cos2\pi u_0 x_1$<br>$\tilde{E}(u) = F{\tilde{E}(x_1} = \delta(u) + \frac{1}{2}\delta(u-u_0) + \frac{1}{2}\delta(u+u_0)$<br>有限长度时$ \tilde{t}(x_1) = (1 + cos2\pi u_0 x_1)rect(\frac{x_1}{L})$<br>$\tilde{E}(u) = [\delta(u) + \frac{1}{2}\delta(u-u_0) + \frac{1}{2}\delta(u+u_0)]*Lsinc(Lu)$<br>$ = Lsinc(Lu) + \frac{L}{2}sinc[L(u-u_0)] + \frac{L}{2}sinc[L(u+u_0)]$ </li>
 </ul>
-<h3 id="圆孔的夫琅和费衍射"><a href="#圆孔的夫琅和费衍射" class="headerlink" title="圆孔的夫琅和费衍射"></a>圆孔的夫琅和费衍射</h3><ul>
-<li>强度分布<br>$ I(P) = I_0[\frac{2J_1(Z}{Z}]^2, Z = ka\theta$</li>
-<li>衍射图样<br>(1)圆孔衍射图样是中心明亮，明暗相间的同心圆环，在θ=0（即点源几何像）处强度最大，随θ变化，会出现强度的极大、极小<br>(2)极大、极小值分布不等间距<br>第一极小位置$ Z = 1.22\pi$, 即$\theta = \frac{0.61\lambda}{a} = \frac{1.22\lambda}{D}$ 为艾里斑半径<br>次级大$ J_2(Z) = 0 $<br>(3)衍射效应与孔径线度成反比，与波长成正比</li>
+<h2 id="透镜的傅里叶变换性质和成像性质"><a href="#透镜的傅里叶变换性质和成像性质" class="headerlink" title="透镜的傅里叶变换性质和成像性质"></a>透镜的傅里叶变换性质和成像性质</h2><h3 id="透镜的透射系数"><a href="#透镜的透射系数" class="headerlink" title="透镜的透射系数"></a>透镜的透射系数</h3><ul>
+<li>$\tilde{t}(x_1,y_1) = exp[-ik\frac{x^2_1+y^2_1}{2f}]$</li>
+<li>注意<br>(1)透镜为有限大小时，引入光瞳函数<br>(2)对任一形式的入射光波，透镜给出相同形式的相位影响<br>(3)具有与透镜相同形式的透明片，其作用类似于相同焦距的透镜<br>(4)$f&gt;0$为正透镜$f&lt;0$为负透镜</li>
 </ul>
-<h2 id="光学成像系统的衍射和分辨本领"><a href="#光学成像系统的衍射和分辨本领" class="headerlink" title="光学成像系统的衍射和分辨本领"></a>光学成像系统的衍射和分辨本领</h2><h3 id="成像系统的衍射现象"><a href="#成像系统的衍射现象" class="headerlink" title="成像系统的衍射现象"></a>成像系统的衍射现象</h3><h3 id="在像面观察的夫琅和费衍射"><a href="#在像面观察的夫琅和费衍射" class="headerlink" title="在像面观察的夫琅和费衍射"></a>在像面观察的夫琅和费衍射</h3><ul>
-<li>成像系统对近处点物在像面所成的夫琅和费衍射像等价于平面波入射时，在$ f = R$的透镜焦面上产生的孔径夫琅和费衍射分布，这提供一种用会聚光照明在像面得到孔径频谱的方法。</li>
+<h3 id="透镜的傅里叶变换性质"><a href="#透镜的傅里叶变换性质" class="headerlink" title="透镜的傅里叶变换性质"></a>透镜的傅里叶变换性质</h3><ul>
+<li>衍射屏紧靠透镜前表面<br>后焦面上的光场分布是衍射屏平面复振幅分布的一个傅里叶变换，后焦面上某点振幅和相位取决于透过屏某一(u,v)分量的振幅和相位。</li>
+<li>衍射屏置于透镜前一定距离<br>透镜后焦面上得到的也是衍射屏平面复振幅分布的傅里叶变换</li>
+<li>结论<br>(1)单色平面波正入射时，不论衍射屏置于透镜何处，在透镜后焦面上将得到其频谱<br>(2)当球面波照明时，物置于任何位置，透镜均起到傅里叶变换作用，但其频谱面在点源像面位置上。<br>(3)存在孔径大小影响：孔径的衍射效应使像质模糊，透镜是低通滤波器，存在渐晕现象</li>
 </ul>
-<h3 id="光学成像系统的分辨率"><a href="#光学成像系统的分辨率" class="headerlink" title="光学成像系统的分辨率"></a>光学成像系统的分辨率</h3><ul>
-<li>瑞利判据：当一个点物衍射图样的中央极大刚好为另一个点物衍射图样的第一极小时，认为此时两点物可分辨。</li>
-<li>典型光学系统的分辨本领<br>(1)人眼的最小可分辨角$ \alpha = \frac{1.22\lambda}{d} $<br>(2)望远物镜最小可分辨角$ \alpha = \theta =  \frac{1.22\lambda}{D} $<br>(3)照相物镜分辨本领$ N = \frac{D}{1.22\lambda f} $(底片上每毫米可分辨的线条数)<br>(4)显微物镜的最小可分辨距$ \varepsilon = \frac{0.61\lambda}{n\sin u}$</li>
+<h3 id="透镜的成像性质"><a href="#透镜的成像性质" class="headerlink" title="透镜的成像性质"></a>透镜的成像性质</h3><h2 id="相干成像系统分析和相干传递函数"><a href="#相干成像系统分析和相干传递函数" class="headerlink" title="相干成像系统分析和相干传递函数"></a>相干成像系统分析和相干传递函数</h2><h3 id="点物成像和线性不变系统"><a href="#点物成像和线性不变系统" class="headerlink" title="点物成像和线性不变系统"></a>点物成像和线性不变系统</h3><ul>
+<li>点扩散函数： 单位复振幅或光强的点物经过系统所产生的像斑的复振幅或光强的分布<br>表示为：$ h(x,y;x’,y’)$</li>
+<li>光学系统的线性和空间不变性<br>(1)光学系统的线性性：<br>线性系统：其总输出为各单个输出的线性组合的系统。<br>光学系统的线性性：一个复杂的光场分布可以分解成许多简单基元分布的线性叠加。<br>相干光学成像系统：对复振幅分布呈线性。<br>非相干光学成像系统：对强度分布呈线性。<br>(2)空间不变性：<br>成像系统的空间不变性：点扩散函数的形式不随场面上物点位置而变的系统。点扩散函数只取决于观察点与几何像点相对位置。<br>此时$h(x,y;x’,y’) = h(x’-x,y’-y)$</li>
 </ul>
-<h2 id="多缝的夫琅和费衍射"><a href="#多缝的夫琅和费衍射" class="headerlink" title="多缝的夫琅和费衍射"></a>多缝的夫琅和费衍射</h2><h3 id="多缝的强度分布公式"><a href="#多缝的强度分布公式" class="headerlink" title="多缝的强度分布公式"></a>多缝的强度分布公式</h3><ul>
-<li>$ I(P) = I_0(\frac{sin\alpha}{\alpha})^2(\frac{sin\frac{N\delta}{2}}{sin\frac{\delta}{2}})^2$<br>其中$\alpha = \frac{kla}{2}$ 或 $ asin\theta = n\lambda$<br>&emsp;&emsp;$\delta = \frac{2\pi}{\lambda}dsin\theta$ 或 $dsin\theta = m\lambda $</li>
-<li>该式包含单缝单缝衍射和多缝干涉</li>
+<h3 id="扩展物体的成像"><a href="#扩展物体的成像" class="headerlink" title="扩展物体的成像"></a>扩展物体的成像</h3><ul>
+<li>对于线性空不变系统，扩展物体的光场分布可以看成许多点物经系统形成的点扩散函数的线性组合。</li>
+<li>$ g(x’)=\int O(x)h(x’-x)dx = O(x’)*h(x’)$</li>
+<li>物的像的光场分布是物的光场与系统点扩散函数的卷积</li>
 </ul>
-<h3 id="多缝衍射图样的特征"><a href="#多缝衍射图样的特征" class="headerlink" title="多缝衍射图样的特征"></a>多缝衍射图样的特征</h3><ul>
-<li>由$(\frac{sin\frac{N\delta}{2}}{sin\frac{\delta}{2}})^2$取干涉极大极小值位置<br>(1)当$\delta = 2m\pi$ 或 $ dsin\theta = m\lambda $ 时出现干涉主极大，且强度为单缝时的$N^2$倍<br>(2)当$ \delta = \frac{2m\pi}{N}$ 或 $ dsin\theta = (m + \frac{m’}{N})\lambda$时出现干涉极小值<br>(3)相邻两个极小值间有一次极大，因而相邻两主极大间有(N－1)个极小值，(N－2)个次极大.</li>
-<li>$(\frac{sin\alpha}{\alpha})^2$的调制作用<br>(1)当$\alpha = n\pi$ 或 $asin\theta = n\lambda$ 时取得衍射极小</li>
-<li>缝数N对衍射分布的影响<br>(1)N增加，使各相邻主极大数目增加<br>(2)N增加，使各主极大的强度增强N²倍<br>(3)N增加，各级主极大（条纹）变细变亮<br>主极大角半宽$ \Delta\theta = \frac{\lambda}{Ndcos\theta_m} $</li>
+<h2 id="相干传递函数（CTF）"><a href="#相干传递函数（CTF）" class="headerlink" title="相干传递函数（CTF）"></a>相干传递函数（CTF）</h2><h3 id="CTF的意义"><a href="#CTF的意义" class="headerlink" title="CTF的意义"></a>CTF的意义</h3><p>二维物体的像g(x’,y’) = O(x’,y’)*h(x’,y’)<br>$ Gc(u,v) = F{g(x’,y’)},Oc(u,v) = F{o(x’,y’)},Hc(u,v) = F{h(x’,y’)}$<br>根据卷积定理有<br>$Hc(u,v) = \frac{Gc(u,v)}{Oc(u,v)}$<br>结论：物函数-&gt;物的频谱×相干传递函数-&gt;像的频谱-&gt;像函数</p>
+<h3 id="CTF的求取"><a href="#CTF的求取" class="headerlink" title="CTF的求取"></a>CTF的求取</h3><ul>
+<li>光瞳函数-&gt; 点扩散函数-&gt;相干传递函数<br>$h(x’,y’) = Aexp[ik\frac{x’^2+y’^2}{2l’}]\iint P(\xi,\eta)exp[-2\pi(u’\xi+v’\eta)]d\xi d\eta, u’ = \frac{x’}{\lambda l’},v’ = \frac{y’}{\lambda l’}$<br>故$h(x’,y’) = F{P(\lambda l’u,\lambda l’v)}$<br>所以$Hc(u,v) = FF{P(\lambda l’u,\lambda l’v)} = {P(-\lambda l’u,-\lambda l’v)}$<br>考虑到光瞳函数具有对称性<br>$Hc(u,v) = P(\lambda l’u,\lambda l’v)$</li>
+<li>讨论<br>(1)$Hc(u,v)$ 为01函数，存在一个截止频率$\rho_M = \sqrt{u^2+v^2}$<br>(2)光学系统是低通滤波器</li>
+<li>例：<br>$P(\xi,\eta = circ(\frac{\sqrt{\xi^2+\eta^2}}{D/2})$<br>$Hc(u,v) = circ(\frac{\sqrt{u^2+v^2}}{D/2\lambda l’})$<br>截止频率$\rho_M = \frac{D}{2\lambda l’}$<br>对于照相物镜成像系统<br>像面截止频率$\rho_M = \frac{D}{2\lambda l’}$<br>物面截止频率$\rho_M = \frac{D}{2\lambda l}$</li>
 </ul>
-<h2 id="衍射光栅"><a href="#衍射光栅" class="headerlink" title="衍射光栅"></a>衍射光栅</h2><h3 id="光栅的分光性能"><a href="#光栅的分光性能" class="headerlink" title="光栅的分光性能"></a>光栅的分光性能</h3><ul>
-<li>光栅方程：$d(sini\pm sin\theta) = m\lambda$(与法线同侧取正，异侧取负)</li>
-<li>光栅的色散：不同波长的同级主极大对应不同的衍射角的现象<br>(1)角色散：表示波长相差0.1nm的两条谱线分开的角距离<br>$\frac{d\theta}{d\lambda} = \frac{m}{dcos\theta}$<br>(2)线色散：波长相差0.1nm的两谱线在焦面上分开的线距离<br>$\frac{dl}{d\lambda} = f\frac{m}{dcos\theta}$<br>(3)匀排光谱：色散是均匀的光栅光谱（θ角不大时，视Cosθ不随θ而变）</li>
-<li>光栅的分辨本领<br>$A = \frac{\lambda}{\Delta\lambda} = mN$</li>
-<li>光栅的自由光谱区<br>$\Delta\lambda = \frac{\lambda}{m}$</li>
+<h2 id="非相干成像系统分析及光学传递函数"><a href="#非相干成像系统分析及光学传递函数" class="headerlink" title="非相干成像系统分析及光学传递函数"></a>非相干成像系统分析及光学传递函数</h2><h3 id="非相干系统的成像和光学传递函数（OTF）"><a href="#非相干系统的成像和光学传递函数（OTF）" class="headerlink" title="非相干系统的成像和光学传递函数（OTF）"></a>非相干系统的成像和光学传递函数（OTF）</h3><ul>
+<li>非相干系统的成像<br>$I(x’,y’) = I_0(x’,y’)*h_I(x’,y’)$<br>空间域中，像的强度分布是物的强度分布与点扩散函数的卷积</li>
+<li>光学传递函数（OTF）<br>$H_I(u,v) = \frac{G_I(u,v)}{O_I(u,v)}$<br>归一化<br>$H(u,v) = \frac{G(u,v)}{O(u,v)}</li>
 </ul>
-<h3 id="正弦-振幅-光栅"><a href="#正弦-振幅-光栅" class="headerlink" title="正弦(振幅)光栅"></a>正弦(振幅)光栅</h3><h3 id="闪耀光栅"><a href="#闪耀光栅" class="headerlink" title="闪耀光栅"></a>闪耀光栅</h3><ul>
-<li>入射光沿光栅面法线方向,$ dsin2\gamma = m\lambda $</li>
-<li>入射光沿刻痕面法线方向,$ 2dsin\gamma = m\lambda $</li>
+<h3 id="OTF求法"><a href="#OTF求法" class="headerlink" title="OTF求法"></a>OTF求法</h3><ul>
+<li><p>用OTF与CTF的自相关关系<br>$ H_I(u,v) = F{|H_c(u,v)|^2}$<br>$ H_I(u,v) = H_c(u,v)\otimes H_c(u,v)$<br>$H(u,v) = \frac{\iint P^*(\xi,\eta)P(\xi+\lambda l’u,\eta+\lambda l’u)d\xi d\eta}{\iint |P(\xi,\eta)|^2d\xi d\eta}$</p>
+</li>
+<li><p>图解<br>分母：为光瞳的总面积<br>分子：中心在原点与中心偏离 (-λl’u, -λl’v) 的两个光瞳的重叠面积<br>$H(u,v) = \frac{两错开光瞳的重叠}{光瞳总面积}</p>
+</li>
+<li>截止频率$\rho = 2\rho_0$</li>
 </ul>
-<h3 id="阶梯光栅"><a href="#阶梯光栅" class="headerlink" title="阶梯光栅"></a>阶梯光栅</h3><h3 id="体光栅"><a href="#体光栅" class="headerlink" title="体光栅"></a>体光栅</h3><h2 id="二元光学元件"><a href="#二元光学元件" class="headerlink" title="二元光学元件"></a>二元光学元件</h2>]]></content>
+<h2 id="阿贝成像理论和波特实验"><a href="#阿贝成像理论和波特实验" class="headerlink" title="阿贝成像理论和波特实验"></a>阿贝成像理论和波特实验</h2><h3 id="阿贝成像理论"><a href="#阿贝成像理论" class="headerlink" title="阿贝成像理论"></a>阿贝成像理论</h3><ul>
+<li>相干光照明的光学透镜成像，是由两次衍射形成的。光学像是干涉条纹的叠加</li>
+</ul>
+<h3 id="波特实验"><a href="#波特实验" class="headerlink" title="波特实验"></a>波特实验</h3><ul>
+<li>波特实验是阿贝成像理论的证明</li>
+<li>空间滤波器——放在频谱面上处理频谱的孔径或掩模</li>
+<li>空间滤波——    对输入信息包含的各种空间频率成分施以振幅和相位调制,以实现特定的变换来改变像的结构。</li>
+<li>实验分析<br>二维光栅<br>(1)水平狭缝滤波—水平频谱代表物的垂直结构，像中只有垂直线条<br>(2)垂直狭缝滤波—垂直频谱综合成像，像中只有水平线条<br>一维光栅<br>(1)只让0级谱通过：像面一片明亮无像<br>(2)只让0级和±1级通过：像面在光栅几何像范围内呈现出一个周期与物光栅相同的余弦光栅<br>(3)只让±2级通过：周期为物光栅一半<br>(4)只挡0级：当a/d&gt;0.5时，物体对比反转；a/d&lt;0.5时，像形状与物相同，只是对比有些变化；a/d=0.5时，像面无光栅像</li>
+</ul>
+<h2 id="光学信息处理"><a href="#光学信息处理" class="headerlink" title="光学信息处理"></a>光学信息处理</h2><ul>
+<li>光学信息处理——用光学方法实现对输入信息的各种变换和处理</li>
+<li>光学方法实现变换或模拟运算：菲涅耳变换或傅里叶变换等；加、减、乘、除、微分、积分、卷积、相关等；编码，解码</li>
+<li>光学信息处理类型<br>相干光学信息处理——相干光照明，复振幅分布信息<br>非相干光学信息处理——非相干光照明，强度分布信息<br>白光信息处理——白光照明</li>
+<li>光学处理特点（与数字图象处理比较）:并行处理,所有信息同时输入进行处理,适合图象的快速,实时处理;抗干扰能力强,以光速运算,操作方便,适合光学神经网络,光通信,光存储光互连,光计算等.</li>
+</ul>
+<h3 id="相干光学信息处理"><a href="#相干光学信息处理" class="headerlink" title="相干光学信息处理"></a>相干光学信息处理</h3><ul>
+<li>相干光学处理系统<br>(1)相干光照明<br>(2)复振幅分布形式的信息<br>(3)系统对复振幅分布呈线性<br>(4)一般在频谱面作处理</li>
+<li>4f 系统</li>
+<li>空间滤波的傅里叶分析，利用4f系统进行计算<br>例：对光栅的分析</li>
+<li>应用举例<br>(1)激光输出处理:用针孔作低通滤波器，于透镜后焦面（频谱面）  上，滤去高频的相干噪声成分，得到均匀的光斑。<br>(2)图象加减:<br>(3)图像微分：使低对比像边缘增强，可用光学手段来实现<br>(4)图象识别：在 4f系统的频谱面上放上匹配滤波器，用光学相关实现图象识别</li>
+</ul>
+<h3 id="非相干光学系统处理"><a href="#非相干光学系统处理" class="headerlink" title="非相干光学系统处理"></a>非相干光学系统处理</h3><h3 id="白光信息处理"><a href="#白光信息处理" class="headerlink" title="白光信息处理"></a>白光信息处理</h3><h2 id="全息术"><a href="#全息术" class="headerlink" title="全息术"></a>全息术</h2><h3 id="全息术原理"><a href="#全息术原理" class="headerlink" title="全息术原理"></a>全息术原理</h3><p>全息术是利用“干涉记录、衍射重现”原理的两步无透镜成像术</p>
+]]></content>
       <categories>
         <category>学习所悟</category>
       </categories>
@@ -338,6 +450,30 @@
 <h2 id="英语每日作文背诵"><a href="#英语每日作文背诵" class="headerlink" title="英语每日作文背诵"></a>英语每日作文背诵</h2><h3 id="致编辑信（英一小作文）"><a href="#致编辑信（英一小作文）" class="headerlink" title="致编辑信（英一小作文）"></a>致编辑信（英一小作文）</h3><p>Dear editors,<br>Many college students have no concept of thrift in their mind. They take it for granted that they spend the money provided by their parents before they enter society.<br>This extravangant spending is primarily caused by the following factors. First of all, nowadays most of the students are born in only-child families. They are the apple in their family’s eyes and naturally get more care and pocket money. In addition, with the improvement of the living standards, parents can afford higher expenditures for their children.<br>From my point of view, a college student, as a pure consumer, should learn to be thrifty. We should limit our expenditure on daily necessities and not buy whatever we want regardless of their prices. The habit of being thrifty can help us form right values and is favorable to our future development.</p>
 <p><p align="right">Yours sincerely,</p></p>
 <p><p align="right">Li Ming</p></p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>&emsp;&emsp;以上内容选自徐涛老师微信公众号和王江涛老师英语必备范文。</p>
+]]></content>
+      <categories>
+        <category>学习所悟</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>考研</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>考研倒计时26！加油考研人！</title>
+    <url>/2020/11/29/study1/</url>
+    <content><![CDATA[<p>&emsp;&emsp;考研最后26天了，每日出了大量的刷题，记忆阶段也不能落下，政治英语每日提分背诵来了！<br><a id="more"></a></p>
+<h2 id="政治每日背诵"><a href="#政治每日背诵" class="headerlink" title="政治每日背诵"></a>政治每日背诵</h2><h3 id="对外开放的措施（毛中特部分分析题）"><a href="#对外开放的措施（毛中特部分分析题）" class="headerlink" title="对外开放的措施（毛中特部分分析题）"></a>对外开放的措施（毛中特部分分析题）</h3><ul>
+<li>推动全面开放，要以“一带一路”建设为重点，坚持“引进来”和“走出去”并重，遵循共商共建共享原则，加强创新能力开放合作，形成陆海内外联动、东西双向互济的开放格局。坚持公平开放、共赢开放、包容开放，构建公平竞争的内外资发展环境，推动经济全球化朝着普惠共赢方向发展，探索求同存异、包容共生的国际合作新途径。中国对外开放，不是要一家唱独角戏，而是要欢迎各方共同参与；不是要谋求势力范围，而是要支持各国共同发展；不是要营造自己的后花园，而是要建设各国共享的百花园。2019年4月26日，总书记在第二届“一带一路”国际合作高峰论坛开幕式上的主旨演讲指出，“中国将采取一系列重大改革开放举措，加强制度性、结构性安排，促进更高水平对外开放”。具体要做到以下几点：第一，更广领域扩大外资市场准入；第二，更大力度加强知识产权保护国际合作；第三，更大规模增加商品和服务进口；第四，更加有效实施国际宏观经济政策协调；第五，更加重视对外开放政策贯彻落实。  </li>
+<li>建设更高水平开放型经济新体制。</li>
+<li>开放型世界经济的首要之义是反对保护主义。</li>
+<li>今日之中国，不仅是中国之中国，而且是世界之中国。未来之中国，必将以更加开放的姿态拥抱世界，必将同世界形成更加良性的互动，带来更加进步和繁荣的中国和世界。</li>
+</ul>
+<h2 id="英语每日作文背诵"><a href="#英语每日作文背诵" class="headerlink" title="英语每日作文背诵"></a>英语每日作文背诵</h2><h3 id="建议信（英一小作文）"><a href="#建议信（英一小作文）" class="headerlink" title="建议信（英一小作文）"></a>建议信（英一小作文）</h3><p>Dear  Professor Byron,<br>&emsp;&emsp;Last week you asked students to write and give you feedback on your lectures. Therefore, I have outlined my thoughts below.<br>&emsp;&emsp;In general, I find your lectures very informative and inspiring. Indeed, I particularly like the way you demonstrate complex issues with the use of simple drawings. This makes your lessons both interesting and memorable. However, I do feel that you could provide us with more handouts, for I often fail to take down all the important points as time is limited. I would also like to see more discussion work, as I find this method the most suitable way to clarify and deepen my understanding of the subject content.<br>&emsp;&emsp;I’d like to thank you for the interest you are taking in us students and look forward to your next lecture.</p>
+<p align="right">Yours sincerely,</p>
+<p align="right">Li Ming</p>
+
 <h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>&emsp;&emsp;以上内容选自徐涛老师微信公众号和王江涛老师英语必备范文。</p>
 ]]></content>
       <categories>
