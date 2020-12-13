@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.arkluo.com","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="&amp;emsp;&amp;emsp;本章内容主要为涉及到像差的分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="应用光学——像差理论部分">
+<meta property="og:url" content="http://www.arkluo.com/2020/12/13/opt8/index.html">
+<meta property="og:site_name" content="心之所动">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;本章内容主要为涉及到像差的分析">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://arkimg.oss-cn-hangzhou.aliyuncs.com/%E5%BA%94%E7%94%A8%E5%85%89%E5%AD%A6/%E5%83%8F%E5%B7%AE/1.png">
+<meta property="og:image" content="https://arkimg.oss-cn-hangzhou.aliyuncs.com/%E5%BA%94%E7%94%A8%E5%85%89%E5%AD%A6/%E5%83%8F%E5%B7%AE/2.png">
+<meta property="og:image" content="https://arkimg.oss-cn-hangzhou.aliyuncs.com/%E5%BA%94%E7%94%A8%E5%85%89%E5%AD%A6/%E5%83%8F%E5%B7%AE/3.png">
+<meta property="og:image" content="https://arkimg.oss-cn-hangzhou.aliyuncs.com/%E5%BA%94%E7%94%A8%E5%85%89%E5%AD%A6/%E5%83%8F%E5%B7%AE/4.png">
+<meta property="article:published_time" content="2020-12-13T11:16:44.000Z">
+<meta property="article:modified_time" content="2020-12-13T11:20:05.057Z">
+<meta property="article:author" content="Ark Luo">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="光学">
+<meta property="article:tag" content="应用光学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://arkimg.oss-cn-hangzhou.aliyuncs.com/%E5%BA%94%E7%94%A8%E5%85%89%E5%AD%A6/%E5%83%8F%E5%B7%AE/1.png">
+
+
+<link rel="canonical" href="http://www.arkluo.com/2020/12/13/opt8/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>应用光学——像差理论部分 | 心之所动</title>
+  
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">心之所动</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">且就随缘去吧</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%90%83%E5%B7%AE"><span class="nav-number">1.</span> <span class="nav-text">球差</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%90%83%E5%B7%AE%E6%A6%82%E5%BF%B5%EF%BC%8C%E8%BD%B4%E5%90%91%E7%90%83%E5%B7%AE%E4%B8%8E%E5%9E%82%E8%BD%B4%E7%90%83%E5%B7%AE%EF%BC%8C%E5%88%9D%E7%BA%A7%E7%90%83%E5%B7%AE%E4%B8%8E%E9%AB%98%E7%BA%A7%E7%90%83%E5%B7%AE"><span class="nav-number">1.1.</span> <span class="nav-text">球差概念，轴向球差与垂轴球差，初级球差与高级球差</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%90%83%E5%B7%AE%E6%9B%B2%E7%BA%BF%EF%BC%8C%E5%85%B7%E6%9C%89%E5%88%9D%E7%BA%A7%E7%90%83%E5%B7%AE%E5%92%8C%E4%BA%8C%E7%BA%A7%E7%90%83%E5%B7%AE%E6%97%B6%E7%9A%84%E7%89%B9%E5%BE%81"><span class="nav-number">1.2.</span> <span class="nav-text">球差曲线，具有初级球差和二级球差时的特征</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E4%B8%AA%E6%8A%98%E5%B0%84%E7%90%83%E9%9D%A2%E7%9A%84%E7%90%83%E5%B7%AE%E7%89%B9%E5%BE%81%EF%BC%8C%E4%B8%89%E4%B8%AA%E6%97%A0%E7%90%83%E5%B7%AE%E7%82%B9%E3%80%81%E5%8F%8D%E5%B8%B8%E5%8C%BA%E4%B8%8E%E5%8D%8A%E5%8F%8D%E5%B8%B8%E5%8C%BA%EF%BC%8C%E9%BD%90%E6%98%8E%E9%80%8F%E9%95%9C%E8%AE%BE%E8%AE%A1"><span class="nav-number">1.3.</span> <span class="nav-text">单个折射球面的球差特征，三个无球差点、反常区与半反常区，齐明透镜设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E7%BA%A7%E7%90%83%E5%B7%AE%E4%B8%8E%E5%AD%94%E5%BE%84%E7%9A%84%E5%85%B3%E7%B3%BB%EF%BC%8C%E7%AC%AC%E4%B8%80%E8%B5%9B%E5%BE%97%E5%92%8C%E6%95%B0%EF%BC%8C%E6%95%B4%E4%BD%93%E7%BC%A9%E6%94%BE%E5%AF%B9%E5%83%8F%E5%B7%AE%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="nav-number">1.4.</span> <span class="nav-text">初级球差与孔径的关系，第一赛得和数，整体缩放对像差的影响</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%96%84%E9%80%8F%E9%95%9C%E4%B8%8E%E7%AE%80%E5%8D%95%E8%96%84%E9%80%8F%E9%95%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%90%83%E5%B7%AE%E7%89%B9%E5%BE%81%E3%80%81%E6%9C%80%E5%B0%8F%E7%90%83%E5%B7%AE%E5%BD%A2%E7%8A%B6"><span class="nav-number">1.5.</span> <span class="nav-text">薄透镜与简单薄透镜系统的球差特征、最小球差形状</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B3%E8%A1%8C%E5%B9%B3%E6%9D%BF%E7%9A%84%E7%90%83%E5%B7%AE"><span class="nav-number">1.6.</span> <span class="nav-text">平行平板的球差</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%B4%E5%A4%96%E5%83%8F%E5%B7%AE"><span class="nav-number">2.</span> <span class="nav-text">轴外像差</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%BC%A6%E6%9D%A1%E4%BB%B6%E5%92%8C%E7%AD%89%E6%99%95%E6%9D%A1%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">正弦条件和等晕条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%B4%E5%A4%96%E5%83%8F%E5%B7%AE-1"><span class="nav-number">2.2.</span> <span class="nav-text">轴外像差</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B5%9B%E5%BE%97%E5%92%8C%E6%95%B0"><span class="nav-number">2.3.</span> <span class="nav-text">赛得和数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%B9%E5%85%B9%E5%87%A1%E9%9D%A2%E5%BC%AF%E6%9B%B2"><span class="nav-number">2.4.</span> <span class="nav-text">匹兹凡面弯曲</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%89%B2%E5%B7%AE"><span class="nav-number">3.</span> <span class="nav-text">色差</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%8D%E7%BD%AE%E8%89%B2%E5%B7%AE"><span class="nav-number">3.1.</span> <span class="nav-text">位置色差</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%8D%E7%BD%AE%E8%89%B2%E5%B7%AE%E7%9A%84%E5%BA%A6%E9%87%8F%E4%B8%8E%E8%89%B2%E5%B7%AE%E6%9B%B2%E7%BA%BF"><span class="nav-number">3.2.</span> <span class="nav-text">位置色差的度量与色差曲线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%8D%E7%BD%AE%E8%89%B2%E5%B7%AE%E4%B8%8E%E7%90%83%E5%B7%AE%E7%9A%84%E6%AF%94%E8%BE%83"><span class="nav-number">3.3.</span> <span class="nav-text">位置色差与球差的比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%80%8D%E7%8E%87%E8%89%B2%E5%B7%AE"><span class="nav-number">3.4.</span> <span class="nav-text">倍率色差</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E7%BA%A7%E4%BD%8D%E7%BD%AE%E8%89%B2%E5%B7%AE-%E7%AC%AC%E4%B8%80%E8%89%B2%E5%B7%AE%E5%92%8C%E6%95%B0"><span class="nav-number">3.5.</span> <span class="nav-text">初级位置色差-第一色差和数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B3%E8%A1%8C%E5%B9%B3%E6%9D%BF%E7%9A%84%E5%88%9D%E7%BA%A7%E4%BD%8D%E7%BD%AE%E8%89%B2%E5%B7%AE"><span class="nav-number">3.6.</span> <span class="nav-text">平行平板的初级位置色差</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E8%96%84%E9%80%8F%E9%95%9C%E4%B8%8E%E8%96%84%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%BD%8D%E7%BD%AE%E8%89%B2%E5%B7%AE"><span class="nav-number">3.7.</span> <span class="nav-text">单薄透镜与薄系统的位置色差</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E7%BA%A7%E5%80%8D%E7%8E%87%E8%89%B2%E5%B7%AE-%E7%AC%AC%E4%BA%8C%E8%89%B2%E5%B7%AE%E5%92%8C%E6%95%B0"><span class="nav-number">3.8.</span> <span class="nav-text">初级倍率色差-第二色差和数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E8%96%84%E9%80%8F%E9%95%9C%E4%B8%8E%E8%96%84%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%88%9D%E7%BA%A7%E5%80%8D%E7%8E%87%E8%89%B2%E5%B7%AE"><span class="nav-number">3.9.</span> <span class="nav-text">单薄透镜与薄系统的初级倍率色差</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%89%B2%E5%B7%AE%E7%9A%84%E6%A0%A1%E6%AD%A3"><span class="nav-number">3.10.</span> <span class="nav-text">色差的校正</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E7%BA%A7%E8%89%B2%E5%B7%AE%E4%B8%8E%E5%AD%94%E5%BE%84%E3%80%81%E8%A7%86%E5%9C%BA%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">3.11.</span> <span class="nav-text">初级色差与孔径、视场的关系</span></a></li></ol></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Ark Luo"
+      src="/images/avatar.JPG">
+  <p class="site-author-name" itemprop="name">Ark Luo</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Arklwz" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Arklwz" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:810135726@qq.com" title="E-Mail → mailto:810135726@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/5862313777" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5862313777" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.arkluo.com/2020/12/13/opt8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.JPG">
+      <meta itemprop="name" content="Ark Luo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="心之所动">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          应用光学——像差理论部分
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2020-12-13 19:16:44 / 修改时间：19:20:05" itemprop="dateCreated datePublished" datetime="2020-12-13T19:16:44+08:00">2020-12-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E6%89%80%E6%82%9F/" itemprop="url" rel="index"><span itemprop="name">学习所悟</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>&emsp;&emsp;本章内容主要为涉及到像差的分析<br><a id="more"></a><br>&emsp;&emsp;该部分《841工程光学基础》考纲内容如下</p>
+<blockquote>
+<p>熟练掌握各种几何像差的概念和基本特征</p>
+</blockquote>
+<h2 id="球差"><a href="#球差" class="headerlink" title="球差"></a>球差</h2><h3 id="球差概念，轴向球差与垂轴球差，初级球差与高级球差"><a href="#球差概念，轴向球差与垂轴球差，初级球差与高级球差" class="headerlink" title="球差概念，轴向球差与垂轴球差，初级球差与高级球差"></a>球差概念，轴向球差与垂轴球差，初级球差与高级球差</h3><ul>
+<li>球差概念<br>(1)轴上点A发出的某孔径带的光线与近轴光线交于不同点，形成球差<br>轴向球差$\delta L’$<br>垂轴球差$\delta T’$<br>(2)如对于某个孔径带有$\delta L’ = 0$时称为对这个孔径带消球差<br>(3)存在球差时，在像面上会产生圆形弥散斑</li>
+<li>初级球差与高级球差<br>$\delta L’ = A_1h_1^2 + A_2h_1^4 + A_3h_1^6… = a_1u_1^2 + a_2u_1^4 + a_3u_1^6…$<br>$\delta T’ = B_1h_1^3 + B_2h_1^5 + B_3h_1^7… = b_1u_1^3 + b_2u_1^5 + b_3u_1^7…$<br>其中第一项称为初级球差，后面各项依次称为二级球差、三级球差等。初级球差以外的各项统称为高级球差</li>
+</ul>
+<h3 id="球差曲线，具有初级球差和二级球差时的特征"><a href="#球差曲线，具有初级球差和二级球差时的特征" class="headerlink" title="球差曲线，具有初级球差和二级球差时的特征"></a>球差曲线，具有初级球差和二级球差时的特征</h3><ul>
+<li>具有初级球差与二级球差时的特征<br>(1)$h_1$或$u_1$很小很小时，为近轴区，$\delta L’ = 0$<br>(2)$h_1$或$u_1$很小时，仅有初级量，称Seidel区，只需要计算一条边光即可确定公式中的系数<br>(3)$h_1$或$u_1$有一定大小，四次项不可忽略,得仅有初级和二级像差时的公式<br>$\delta L’ = A_1(\frac{h_1}{h_m})^2 + A_2(\frac{h_1}{h_m})^4$<br>对边光校正球差，在0.707取得最大球差<br>(4)$h_1$或$u_1$很大时,需要计算更多的光线<br>例如到三级，这时当全孔径和0.707孔径校正球差后，0.85孔径带具有最大剩余球差</li>
+<li>球差曲线</li>
+</ul>
+<h3 id="单个折射球面的球差特征，三个无球差点、反常区与半反常区，齐明透镜设计"><a href="#单个折射球面的球差特征，三个无球差点、反常区与半反常区，齐明透镜设计" class="headerlink" title="单个折射球面的球差特征，三个无球差点、反常区与半反常区，齐明透镜设计"></a>单个折射球面的球差特征，三个无球差点、反常区与半反常区，齐明透镜设计</h3><ul>
+<li>单个折射球面的球差和球差分布<br>会聚面产生负球差，发散面产生正球差，反常区和半反常区相反<br>(1)球心到齐明点称反常区<br>(2)顶点到球心称半反常区<br><img src="https://arkimg.oss-cn-hangzhou.aliyuncs.com/%E5%BA%94%E7%94%A8%E5%85%89%E5%AD%A6/%E5%83%8F%E5%B7%AE/1.png" alt="图1"></li>
+<li>齐明点、齐明面与齐明透镜<br>一对齐明点$L = \frac{n’ + n}{n}r, L’ = \frac{n’ + n}{n’}r$<br>必为实物成虚像或虚物成实像。此时该面不产生球差，称齐明面。加同心面可得齐明透镜<br><img src="https://arkimg.oss-cn-hangzhou.aliyuncs.com/%E5%BA%94%E7%94%A8%E5%85%89%E5%AD%A6/%E5%83%8F%E5%B7%AE/2.png" alt="图2"><br>齐明透镜成组使用，常在测量仪器中用于扩大孔径</li>
+</ul>
+<h3 id="初级球差与孔径的关系，第一赛得和数，整体缩放对像差的影响"><a href="#初级球差与孔径的关系，第一赛得和数，整体缩放对像差的影响" class="headerlink" title="初级球差与孔径的关系，第一赛得和数，整体缩放对像差的影响"></a>初级球差与孔径的关系，第一赛得和数，整体缩放对像差的影响</h3><ul>
+<li>初级球差，第一赛得和数<br>仅有初级量的区域称赛得(Seidel)区，在此区域内有$sinU = u$<br>$\delta L’ \propto u^2$</li>
+<li>整体缩放：指系统中所有线性量均乘以一个相同的倍数，而所有角度量不变<br>根据比例关系，球差随整体缩放线性变化。这对于实际球差、高级球差和其他像差也正确</li>
+</ul>
+<h3 id="薄透镜与简单薄透镜系统的球差特征、最小球差形状"><a href="#薄透镜与简单薄透镜系统的球差特征、最小球差形状" class="headerlink" title="薄透镜与简单薄透镜系统的球差特征、最小球差形状"></a>薄透镜与简单薄透镜系统的球差特征、最小球差形状</h3><ul>
+<li>正透镜恒产生负球差，负透镜恒产生正球差，当入、出射光线关于透镜对称时，球差取得极值（绝对值最小），此时的透镜形状为最小球差形状。</li>
+<li>单个薄透镜不可能消球差<br>校正方法：双胶合透镜，微小间隔的双分离透镜</li>
+</ul>
+<h3 id="平行平板的球差"><a href="#平行平板的球差" class="headerlink" title="平行平板的球差"></a>平行平板的球差</h3><ul>
+<li>近轴光线位移$\Delta l’ = (1 - \frac{1}{n})d$</li>
+<li>规律<br>(1)平行平板恒产生正球差，只能以产生负球差的系统补偿之。当且仅当光线垂直于平板表面入射时球差零<br>(2)平板厚则球差大<br>(3)平板虽薄但孔径大，球差也大</li>
+</ul>
+<h2 id="轴外像差"><a href="#轴外像差" class="headerlink" title="轴外像差"></a>轴外像差</h2><h3 id="正弦条件和等晕条件"><a href="#正弦条件和等晕条件" class="headerlink" title="正弦条件和等晕条件"></a>正弦条件和等晕条件</h3><ul>
+<li>正弦条件<br>$n’y’sinU’ = nysinU, \frac{h}{sinU’} = f’$</li>
+<li>等晕成像和等晕条件<br>实际由于球差存在，只能要求近轴轴外点具有和轴上点A相同的成像缺陷。此时称等晕成像，需要满足的条件称等晕条件<br>$1 - \frac{nsinU}{\beta n’sinU’} = \frac{\delta L’}{l_p’ - l’}$<br>当球差为零时，等晕条件化为正弦条件。<br>当不满足等晕条件时，轴上点与近轴轴外点成像缺陷不等，用正弦差表示</li>
+</ul>
+<h3 id="轴外像差-1"><a href="#轴外像差-1" class="headerlink" title="轴外像差"></a>轴外像差</h3><p>由于折射球面存在球差和像面弯曲，使轴外点衍生出一系列像差</p>
+<ul>
+<li><p>慧差：<br>(1)当系统不满足等晕条件时，轴外点存在彗差。<br><img src="https://arkimg.oss-cn-hangzhou.aliyuncs.com/%E5%BA%94%E7%94%A8%E5%85%89%E5%AD%A6/%E5%83%8F%E5%B7%AE/3.png" alt="图3"><br>(2)上下光线的交点偏离主光线：子午彗差<br>$K_t’ = \frac{1}{2}(y_a’ + y_b’) - y_p’$<br>前后光线的交点偏离主光线：弧矢彗差<br>$K_s’ = y_s’ - y_p’$<br>(3)仅有彗差时，将形成彗星状的弥散斑<br>(4)彗差和孔径、视场都有关, 且$K_{s0}, K_{t0} \propto u^2W$</p>
+</li>
+<li><p>像散和像面弯曲:<br>(1)子午细光束像点在主光线上，弧矢细光束像点在主光线和辅轴的交点上，两者之轴向距离为像散。子午细光束像点和弧矢细光束像点会偏离高斯像面。如果把各视场的子午细光束像点或弧矢细光束像点连起来，将会得到弯曲的像面，这就是像面弯曲。<br><img src="https://arkimg.oss-cn-hangzhou.aliyuncs.com/%E5%BA%94%E7%94%A8%E5%85%89%E5%AD%A6/%E5%83%8F%E5%B7%AE/4.png" alt="图4"><br>(2)像散为零时，子午细光束像点和弧矢细光束像点重合，但不与高斯像面重合，所以像面弯曲仍然存在，这种像面弯曲叫匹兹凡面弯曲<br>(3)像散，场曲只与视场有关，且$x_t’, x_s’,\Delta x’ \propto W^2$</p>
+</li>
+<li><p>畸变<br>(1)阑位置移动，主光线与高斯像面交点高度变化，引起像的变形<br>(2)畸变仅是像的变形，不影响像的清晰度<br>(3)实际像高比理想像高大，称正畸变(枕形)，反之称负畸变(桶形)<br>(4)相对畸变：$\frac{\delta y_p’}{y_0’} = \frac{y_p’ - y_0’}{y_0’}\times 100%$<br>(5)特征：<br>全对称系统（结构对称，物像对称），不产生畸变<br>孔阑与之重合的接触薄系统，不产生畸变（主光线通过系统中心，沿理想方向射出）<br>对于单薄透镜，光阑前移——负畸变，光阑后移——正畸变。因此，畸变与光阑位置有关<br>(6)畸变只与视场有关，且$\delta y_p’ \propto W^3$</p>
+</li>
+</ul>
+<h3 id="赛得和数"><a href="#赛得和数" class="headerlink" title="赛得和数"></a>赛得和数</h3><ul>
+<li>初级球差-第一赛得和数</li>
+<li>初级慧差-第二赛得和数</li>
+<li>初级像散-第三赛得和数</li>
+<li>初级场曲-第三、四赛得和数</li>
+<li>初级畸变-第五赛得和数</li>
+</ul>
+<h3 id="匹兹凡面弯曲"><a href="#匹兹凡面弯曲" class="headerlink" title="匹兹凡面弯曲"></a>匹兹凡面弯曲</h3><ul>
+<li>像散为0，任然存在场曲</li>
+<li>薄系统的匹兹凡和-第四赛得和数</li>
+<li>正负光焦度的分离是校正匹兹凡和的唯一方法</li>
+</ul>
+<h2 id="色差"><a href="#色差" class="headerlink" title="色差"></a>色差</h2><h3 id="位置色差"><a href="#位置色差" class="headerlink" title="位置色差"></a>位置色差</h3><ul>
+<li>由于同种材料对不同波长具有不同的折射率，对同一物方截距将算出不同的像方截距，导致位置色差</li>
+<li>对复色光成像的仪器要求对主色光校正单色像差，对成像光谱的两端校正色差</li>
+</ul>
+<h3 id="位置色差的度量与色差曲线"><a href="#位置色差的度量与色差曲线" class="headerlink" title="位置色差的度量与色差曲线"></a>位置色差的度量与色差曲线</h3><ul>
+<li>近轴区$\delta l_{ch}’ = l_F’ - l_C’$<br>一般有$\delta L_{ch}’ = L_F’ - L_C’$<br>级数式：$\delta L_{ch}’ = a_0 + a_1h_1^2 + a_2h_1^4+… = \delta l_{ch}’ + a_1h_1^2 + a_2h_1^4+…$</li>
+</ul>
+<h3 id="位置色差与球差的比较"><a href="#位置色差与球差的比较" class="headerlink" title="位置色差与球差的比较"></a>位置色差与球差的比较</h3><ul>
+<li>位置色差和球差都是轴上点像差</li>
+<li>位置色差和球差都产生圆形弥散斑</li>
+<li>位置色差产生彩色圆形弥散斑，球差产生单色圆形弥散斑</li>
+</ul>
+<h3 id="倍率色差"><a href="#倍率色差" class="headerlink" title="倍率色差"></a>倍率色差</h3><ul>
+<li>波长变化引起材料的折射率变化，继而引起光学系统的放大倍率变化，像的大小随之变化</li>
+<li>$\delta y_{ch}’ = y_F’ - y_C’$</li>
+</ul>
+<h3 id="初级位置色差-第一色差和数"><a href="#初级位置色差-第一色差和数" class="headerlink" title="初级位置色差-第一色差和数"></a>初级位置色差-第一色差和数</h3><h3 id="平行平板的初级位置色差"><a href="#平行平板的初级位置色差" class="headerlink" title="平行平板的初级位置色差"></a>平行平板的初级位置色差</h3><ul>
+<li>所以平行平板恒产生正色差，当且仅当时不产生色差</li>
+</ul>
+<h3 id="单薄透镜与薄系统的位置色差"><a href="#单薄透镜与薄系统的位置色差" class="headerlink" title="单薄透镜与薄系统的位置色差"></a>单薄透镜与薄系统的位置色差</h3><ul>
+<li>可见正透镜恒产生负色差，负透镜恒产生正色差，色差的大小与物距(像距)有关</li>
+</ul>
+<h3 id="初级倍率色差-第二色差和数"><a href="#初级倍率色差-第二色差和数" class="headerlink" title="初级倍率色差-第二色差和数"></a>初级倍率色差-第二色差和数</h3><h3 id="单薄透镜与薄系统的初级倍率色差"><a href="#单薄透镜与薄系统的初级倍率色差" class="headerlink" title="单薄透镜与薄系统的初级倍率色差"></a>单薄透镜与薄系统的初级倍率色差</h3><ul>
+<li>$C_I$ 为0时，$C_{II}$自动校正为0</li>
+<li>当即孔阑与之重合时，不论位置色差如何都能校正倍率色差</li>
+</ul>
+<h3 id="色差的校正"><a href="#色差的校正" class="headerlink" title="色差的校正"></a>色差的校正</h3><ul>
+<li>考虑双胶合及微小间隔的双分离组, 且满足<br>$\begin{cases}<br>\frac{\Phi_1}{v_1} + \frac{\Phi_2}{v_2} = 0\<br>\Phi_1 + \Phi_2 = \Phi<br>\end{cases}$</li>
+<li>有一定间隔d的分离透镜系统，满足<br>$\begin{cases}<br>\frac{\Phi_1}{v_1} + \frac{h_2^2}{h_1^2}\frac{\Phi_2}{v_2} = 0 \<br>\Phi_1 + \frac{h_2}{h_1}\Phi_2 = \Phi<br>\end{cases}$<br>物方无穷远时：$\frac{h_2}{h_1} = 1 - d\Phi_1$</li>
+</ul>
+<h3 id="初级色差与孔径、视场的关系"><a href="#初级色差与孔径、视场的关系" class="headerlink" title="初级色差与孔径、视场的关系"></a>初级色差与孔径、视场的关系</h3><ul>
+<li>初级位置色差与孔径和视场无关</li>
+<li>初级倍率色差只与视场有关，且$\delta y_{ch}’ \propto W$</li>
+<li>近轴光存在初级位置色差</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"># 学习</a>
+              <a href="/tags/%E5%85%89%E5%AD%A6/" rel="tag"># 光学</a>
+              <a href="/tags/%E5%BA%94%E7%94%A8%E5%85%89%E5%AD%A6/" rel="tag"># 应用光学</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/12/11/opt7/" rel="prev" title="应用光学——光能及其传播计算">
+                  <i class="fa fa-chevron-left"></i> 应用光学——光能及其传播计算
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments">
+    <div id="utterances-container"></div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ark Luo</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>-->
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+
+<script>
+NexT.utils.loadComments('#utterances-container', () => {
+  const script = document.createElement('script');
+  script.src = 'https://utteranc.es/client.js';
+  script.setAttribute('repo', "Arklwz/arklwz.github.io");
+  script.setAttribute('issue-term', "pathname");
+  script.setAttribute('theme', "preferred-color-scheme");
+  script.crossOrigin = 'anonymous';
+  script.async = true;
+  document.querySelector('#utterances-container').appendChild(script);
+});
+</script>
+
+</body>
+</html>

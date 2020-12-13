@@ -145,6 +145,100 @@
       </tags>
   </entry>
   <entry>
+    <title>物理光学——傅里叶光学</title>
+    <url>/2020/12/01/opt3/</url>
+    <content><![CDATA[<p>&emsp;&emsp;大致更新完成<br><a id="more"></a><br>&emsp;&emsp;该部分《841工程光学基础》考纲内容如下</p>
+<blockquote>
+<p>熟练掌握电磁场叠加以及空间频率的概念；掌握4F系统光学系统用于光学信息处理的概念和过程；相干光学系统和非相干光学系统对成像影响的结论和运用；空间滤波的概念及简单计算。</p>
+</blockquote>
+<h2 id="平面波的复振幅分布和空间频率"><a href="#平面波的复振幅分布和空间频率" class="headerlink" title="平面波的复振幅分布和空间频率"></a>平面波的复振幅分布和空间频率</h2><h3 id="光场中任一平面上的复振幅分布"><a href="#光场中任一平面上的复振幅分布" class="headerlink" title="光场中任一平面上的复振幅分布"></a>光场中任一平面上的复振幅分布</h3><ul>
+<li>空间复振幅分布 $ \tilde{E}(x,y,z) = Aexp[ik(xcos\alpha + ycos\beta + zcos\gamma)] $</li>
+<li>令$z = z_0$ 则可以得到 $ \tilde{E}(x,y) = A’exp[i\frac{2\pi}{\lambda}(xcos\alpha + ycos\beta)] $</li>
+</ul>
+<h3 id="复振幅分布的空间频率及物理意义"><a href="#复振幅分布的空间频率及物理意义" class="headerlink" title="复振幅分布的空间频率及物理意义"></a>复振幅分布的空间频率及物理意义</h3><ul>
+<li>空间频率 $ u = \frac{cos\alpha}{\lambda} = \frac{sin\theta_x}{\lambda}, v = \frac{cos\beta}{\lambda} = \frac{sin\theta_y}{\lambda}$<br>则 $ \tilde{E}(x,y) = A’exp[i2\pi(ux + vy)] $</li>
+<li>空间频率的意义<br>(1)空间频率表示复振幅分布的周期性<br>(2)<br>(3)光波场某一平面上的复振幅分布可以分解成许多不同基本周期分布，则表明包含着许多不同的（u,v）成分，对应着许多不同方向$(cos\alpha,cos\beta)$传播的平面波<br>(4)（u,v）也可以表示不同强度分布的空间周期性</li>
+</ul>
+<h3 id="复杂复振幅按-u-v-的分解"><a href="#复杂复振幅按-u-v-的分解" class="headerlink" title="复杂复振幅按(u,v)的分解"></a>复杂复振幅按(u,v)的分解</h3><ul>
+<li>$\tilde{E}(x,y) = \iint\tilde{E}(u,v)exp[i2\pi(ux+vy))]dudv, \tilde{E}(x,y) = F^-1{\tilde{E}(u,v)}$</li>
+<li>$\tilde{E}(u,v) = \iint\tilde{E}(x,y)exp[-i2\pi(ux+vy))]dudv,<br>\tilde{E}(u,v) = F{\tilde{E}(x,y)}$</li>
+</ul>
+<h2 id="衍射现象的傅里叶分析方法"><a href="#衍射现象的傅里叶分析方法" class="headerlink" title="衍射现象的傅里叶分析方法"></a>衍射现象的傅里叶分析方法</h2><h3 id="夫琅和费近似下衍射场与孔径场的傅立叶变换关系"><a href="#夫琅和费近似下衍射场与孔径场的傅立叶变换关系" class="headerlink" title="夫琅和费近似下衍射场与孔径场的傅立叶变换关系"></a>夫琅和费近似下衍射场与孔径场的傅立叶变换关系</h3><ul>
+<li>$\tilde{E}(x,y) = \tilde{E}(u,v) = F{\tilde{E}(x,y)}, u = \frac{x}{\lambda z_1} v = \frac{y}{\lambda z_1}$<br>可以表示<br>(1)衍射场的分布只须对孔径面复振幅分布做一个傅氏变换求取<br>(2)焦面场（衍射场）上是不同方向传播的平面波的一个频谱分布，焦面即为频谱面</li>
+</ul>
+<h3 id="夫琅和费衍射举例"><a href="#夫琅和费衍射举例" class="headerlink" title="夫琅和费衍射举例"></a>夫琅和费衍射举例</h3><ul>
+<li>矩孔和单缝衍射<br>$\tilde{E}(x_1,y_1) = \tilde{E_0}(x_1,y_1)\tilde{t}(x_1,y_1) = rect(\frac{x_1}{a}) rect(\frac{y_1}{b}) $<br>$\tilde{E}(u,v) = F{\tilde{E}(x_1,y_1)} = abSinc(au)Sinc(bv)$<br>$I(x,y) = |\tilde{E}(u,v)|^2 = I_0 Sinc^2(\frac{ax}{\lambda z_1})Sinc(\frac{by}{\lambda z_1})$<br>傅里叶变换相似定理<br>$F{\tilde{E}(mx,ny)} = \frac{1}{mn}\tilde{E}(\frac{u}{m},\frac{v}{n})$</li>
+<li>双缝衍射<br>傅里叶变换的相移定理<br>$F{\tilde{E}(x-a,y-b)} = \tilde{E}(u,v)exp[-i2\pi(ua+vb)]$<br>$\tilde{E}(x_1) = rect(\frac{x_1-\frac{d}{2}}{a}) + rect(\frac{x_1+\frac{d}{2}}{a})$<br>$\tilde{E}(x) = F{\tilde{E}(x_1)} = F{rect(\frac{x_1}{a})}exp[-i2\pi u(-\frac{d}{2})] + F{rect(\frac{x_1}{a})}exp[-i2\pi u(\frac{d}{2})] $<br>$ = 2acos(\pi ud)Sinc(au) = 2aSinc(\frac{ax}{\lambda z_1})cos(\frac{\pi ud}{\lambda z_1}) $</li>
+<li>正弦光栅<br>无限长度时$ \tilde{t}(x_1) = 1 + cos2\pi u_0 x_1$<br>$\tilde{E}(u) = F{\tilde{E}(x_1} = \delta(u) + \frac{1}{2}\delta(u-u_0) + \frac{1}{2}\delta(u+u_0)$<br>有限长度时$ \tilde{t}(x_1) = (1 + cos2\pi u_0 x_1)rect(\frac{x_1}{L})$<br>$\tilde{E}(u) = [\delta(u) + \frac{1}{2}\delta(u-u_0) + \frac{1}{2}\delta(u+u_0)]*Lsinc(Lu)$<br>$ = Lsinc(Lu) + \frac{L}{2}sinc[L(u-u_0)] + \frac{L}{2}sinc[L(u+u_0)]$ </li>
+</ul>
+<h2 id="透镜的傅里叶变换性质和成像性质"><a href="#透镜的傅里叶变换性质和成像性质" class="headerlink" title="透镜的傅里叶变换性质和成像性质"></a>透镜的傅里叶变换性质和成像性质</h2><h3 id="透镜的透射系数"><a href="#透镜的透射系数" class="headerlink" title="透镜的透射系数"></a>透镜的透射系数</h3><ul>
+<li>$\tilde{t}(x_1,y_1) = exp[-ik\frac{x^2_1+y^2_1}{2f}]$</li>
+<li>注意<br>(1)透镜为有限大小时，引入光瞳函数<br>(2)对任一形式的入射光波，透镜给出相同形式的相位影响<br>(3)具有与透镜相同形式的透明片，其作用类似于相同焦距的透镜<br>(4)$f&gt;0$为正透镜$f&lt;0$为负透镜</li>
+</ul>
+<h3 id="透镜的傅里叶变换性质"><a href="#透镜的傅里叶变换性质" class="headerlink" title="透镜的傅里叶变换性质"></a>透镜的傅里叶变换性质</h3><ul>
+<li>衍射屏紧靠透镜前表面<br>后焦面上的光场分布是衍射屏平面复振幅分布的一个傅里叶变换，后焦面上某点振幅和相位取决于透过屏某一(u,v)分量的振幅和相位。</li>
+<li>衍射屏置于透镜前一定距离<br>透镜后焦面上得到的也是衍射屏平面复振幅分布的傅里叶变换</li>
+<li>结论<br>(1)单色平面波正入射时，不论衍射屏置于透镜何处，在透镜后焦面上将得到其频谱<br>(2)当球面波照明时，物置于任何位置，透镜均起到傅里叶变换作用，但其频谱面在点源像面位置上。<br>(3)存在孔径大小影响：孔径的衍射效应使像质模糊，透镜是低通滤波器，存在渐晕现象</li>
+</ul>
+<h3 id="透镜的成像性质"><a href="#透镜的成像性质" class="headerlink" title="透镜的成像性质"></a>透镜的成像性质</h3><h2 id="相干成像系统分析和相干传递函数"><a href="#相干成像系统分析和相干传递函数" class="headerlink" title="相干成像系统分析和相干传递函数"></a>相干成像系统分析和相干传递函数</h2><h3 id="点物成像和线性不变系统"><a href="#点物成像和线性不变系统" class="headerlink" title="点物成像和线性不变系统"></a>点物成像和线性不变系统</h3><ul>
+<li>点扩散函数： 单位复振幅或光强的点物经过系统所产生的像斑的复振幅或光强的分布<br>表示为：$ h(x,y;x’,y’)$</li>
+<li>光学系统的线性和空间不变性<br>(1)光学系统的线性性：<br>线性系统：其总输出为各单个输出的线性组合的系统。<br>光学系统的线性性：一个复杂的光场分布可以分解成许多简单基元分布的线性叠加。<br>相干光学成像系统：对复振幅分布呈线性。<br>非相干光学成像系统：对强度分布呈线性。<br>(2)空间不变性：<br>成像系统的空间不变性：点扩散函数的形式不随场面上物点位置而变的系统。点扩散函数只取决于观察点与几何像点相对位置。<br>此时$h(x,y;x’,y’) = h(x’-x,y’-y)$</li>
+</ul>
+<h3 id="扩展物体的成像"><a href="#扩展物体的成像" class="headerlink" title="扩展物体的成像"></a>扩展物体的成像</h3><ul>
+<li>对于线性空不变系统，扩展物体的光场分布可以看成许多点物经系统形成的点扩散函数的线性组合。</li>
+<li>$ g(x’)=\int O(x)h(x’-x)dx = O(x’)*h(x’)$</li>
+<li>物的像的光场分布是物的光场与系统点扩散函数的卷积</li>
+</ul>
+<h2 id="相干传递函数（CTF）"><a href="#相干传递函数（CTF）" class="headerlink" title="相干传递函数（CTF）"></a>相干传递函数（CTF）</h2><h3 id="CTF的意义"><a href="#CTF的意义" class="headerlink" title="CTF的意义"></a>CTF的意义</h3><p>二维物体的像g(x’,y’) = O(x’,y’)*h(x’,y’)<br>$ Gc(u,v) = F{g(x’,y’)},Oc(u,v) = F{o(x’,y’)},Hc(u,v) = F{h(x’,y’)}$<br>根据卷积定理有<br>$Hc(u,v) = \frac{Gc(u,v)}{Oc(u,v)}$<br>结论：物函数-&gt;物的频谱×相干传递函数-&gt;像的频谱-&gt;像函数</p>
+<h3 id="CTF的求取"><a href="#CTF的求取" class="headerlink" title="CTF的求取"></a>CTF的求取</h3><ul>
+<li>光瞳函数-&gt; 点扩散函数-&gt;相干传递函数<br>$h(x’,y’) = Aexp[ik\frac{x’^2+y’^2}{2l’}]\iint P(\xi,\eta)exp[-2\pi(u’\xi+v’\eta)]d\xi d\eta, u’ = \frac{x’}{\lambda l’},v’ = \frac{y’}{\lambda l’}$<br>故$h(x’,y’) = F{P(\lambda l’u,\lambda l’v)}$<br>所以$Hc(u,v) = FF{P(\lambda l’u,\lambda l’v)} = {P(-\lambda l’u,-\lambda l’v)}$<br>考虑到光瞳函数具有对称性<br>$Hc(u,v) = P(\lambda l’u,\lambda l’v)$</li>
+<li>讨论<br>(1)$Hc(u,v)$ 为01函数，存在一个截止频率$\rho_M = \sqrt{u^2+v^2}$<br>(2)光学系统是低通滤波器</li>
+<li>例：<br>$P(\xi,\eta = circ(\frac{\sqrt{\xi^2+\eta^2}}{D/2})$<br>$Hc(u,v) = circ(\frac{\sqrt{u^2+v^2}}{D/2\lambda l’})$<br>截止频率$\rho_M = \frac{D}{2\lambda l’}$<br>对于照相物镜成像系统<br>像面截止频率$\rho_M = \frac{D}{2\lambda l’}$<br>物面截止频率$\rho_M = \frac{D}{2\lambda l}$</li>
+</ul>
+<h2 id="非相干成像系统分析及光学传递函数"><a href="#非相干成像系统分析及光学传递函数" class="headerlink" title="非相干成像系统分析及光学传递函数"></a>非相干成像系统分析及光学传递函数</h2><h3 id="非相干系统的成像和光学传递函数（OTF）"><a href="#非相干系统的成像和光学传递函数（OTF）" class="headerlink" title="非相干系统的成像和光学传递函数（OTF）"></a>非相干系统的成像和光学传递函数（OTF）</h3><ul>
+<li>非相干系统的成像<br>$I(x’,y’) = I_0(x’,y’)*h_I(x’,y’)$<br>空间域中，像的强度分布是物的强度分布与点扩散函数的卷积</li>
+<li>光学传递函数（OTF）<br>$H_I(u,v) = \frac{G_I(u,v)}{O_I(u,v)}$<br>归一化<br>$H(u,v) = \frac{G(u,v)}{O(u,v)}</li>
+</ul>
+<h3 id="OTF求法"><a href="#OTF求法" class="headerlink" title="OTF求法"></a>OTF求法</h3><ul>
+<li><p>用OTF与CTF的自相关关系<br>$ H_I(u,v) = F{|H_c(u,v)|^2}$<br>$ H_I(u,v) = H_c(u,v)\otimes H_c(u,v)$<br>$H(u,v) = \frac{\iint P^*(\xi,\eta)P(\xi+\lambda l’u,\eta+\lambda l’u)d\xi d\eta}{\iint |P(\xi,\eta)|^2d\xi d\eta}$</p>
+</li>
+<li><p>图解<br>分母：为光瞳的总面积<br>分子：中心在原点与中心偏离 (-λl’u, -λl’v) 的两个光瞳的重叠面积<br>$H(u,v) = \frac{两错开光瞳的重叠}{光瞳总面积}</p>
+</li>
+<li>截止频率$\rho = 2\rho_0$</li>
+</ul>
+<h2 id="阿贝成像理论和波特实验"><a href="#阿贝成像理论和波特实验" class="headerlink" title="阿贝成像理论和波特实验"></a>阿贝成像理论和波特实验</h2><h3 id="阿贝成像理论"><a href="#阿贝成像理论" class="headerlink" title="阿贝成像理论"></a>阿贝成像理论</h3><ul>
+<li>相干光照明的光学透镜成像，是由两次衍射形成的。光学像是干涉条纹的叠加</li>
+</ul>
+<h3 id="波特实验"><a href="#波特实验" class="headerlink" title="波特实验"></a>波特实验</h3><ul>
+<li>波特实验是阿贝成像理论的证明</li>
+<li>空间滤波器——放在频谱面上处理频谱的孔径或掩模</li>
+<li>空间滤波——    对输入信息包含的各种空间频率成分施以振幅和相位调制,以实现特定的变换来改变像的结构。</li>
+<li>实验分析<br>二维光栅<br>(1)水平狭缝滤波—水平频谱代表物的垂直结构，像中只有垂直线条<br>(2)垂直狭缝滤波—垂直频谱综合成像，像中只有水平线条<br>一维光栅<br>(1)只让0级谱通过：像面一片明亮无像<br>(2)只让0级和±1级通过：像面在光栅几何像范围内呈现出一个周期与物光栅相同的余弦光栅<br>(3)只让±2级通过：周期为物光栅一半<br>(4)只挡0级：当a/d&gt;0.5时，物体对比反转；a/d&lt;0.5时，像形状与物相同，只是对比有些变化；a/d=0.5时，像面无光栅像</li>
+</ul>
+<h2 id="光学信息处理"><a href="#光学信息处理" class="headerlink" title="光学信息处理"></a>光学信息处理</h2><ul>
+<li>光学信息处理——用光学方法实现对输入信息的各种变换和处理</li>
+<li>光学方法实现变换或模拟运算：菲涅耳变换或傅里叶变换等；加、减、乘、除、微分、积分、卷积、相关等；编码，解码</li>
+<li>光学信息处理类型<br>相干光学信息处理——相干光照明，复振幅分布信息<br>非相干光学信息处理——非相干光照明，强度分布信息<br>白光信息处理——白光照明</li>
+<li>光学处理特点（与数字图象处理比较）:并行处理,所有信息同时输入进行处理,适合图象的快速,实时处理;抗干扰能力强,以光速运算,操作方便,适合光学神经网络,光通信,光存储光互连,光计算等.</li>
+</ul>
+<h3 id="相干光学信息处理"><a href="#相干光学信息处理" class="headerlink" title="相干光学信息处理"></a>相干光学信息处理</h3><ul>
+<li>相干光学处理系统<br>(1)相干光照明<br>(2)复振幅分布形式的信息<br>(3)系统对复振幅分布呈线性<br>(4)一般在频谱面作处理</li>
+<li>4f 系统</li>
+<li>空间滤波的傅里叶分析，利用4f系统进行计算<br>例：对光栅的分析</li>
+<li>应用举例<br>(1)激光输出处理:用针孔作低通滤波器，于透镜后焦面（频谱面）  上，滤去高频的相干噪声成分，得到均匀的光斑。<br>(2)图象加减:<br>(3)图像微分：使低对比像边缘增强，可用光学手段来实现<br>(4)图象识别：在 4f系统的频谱面上放上匹配滤波器，用光学相关实现图象识别</li>
+</ul>
+<h3 id="非相干光学系统处理"><a href="#非相干光学系统处理" class="headerlink" title="非相干光学系统处理"></a>非相干光学系统处理</h3><h3 id="白光信息处理"><a href="#白光信息处理" class="headerlink" title="白光信息处理"></a>白光信息处理</h3><h2 id="全息术"><a href="#全息术" class="headerlink" title="全息术"></a>全息术</h2><h3 id="全息术原理"><a href="#全息术原理" class="headerlink" title="全息术原理"></a>全息术原理</h3><p>全息术是利用“干涉记录、衍射重现”原理的两步无透镜成像术</p>
+]]></content>
+      <categories>
+        <category>学习所悟</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>光学</tag>
+        <tag>物理光学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>应用光学——典型光学系统</title>
     <url>/2020/11/30/opt1/</url>
     <content><![CDATA[<p>&emsp;&emsp;几何光学典型光学系统，主要包括眼镜、放大镜、显微镜、望远镜、摄影系统和投影系统几部分组成。<br><a id="more"></a><br>以后有机会把典型光学系统的图贴上，暂时算更新完了<br>&emsp;&emsp;该部分《841工程光学基础》考纲内容如下</p>
@@ -281,6 +375,131 @@
       </tags>
   </entry>
   <entry>
+    <title>应用光学——像差理论部分</title>
+    <url>/2020/12/13/opt8/</url>
+    <content><![CDATA[<p>&emsp;&emsp;本章内容主要为涉及到像差的分析<br><a id="more"></a><br>&emsp;&emsp;该部分《841工程光学基础》考纲内容如下</p>
+<blockquote>
+<p>熟练掌握各种几何像差的概念和基本特征</p>
+</blockquote>
+<h2 id="球差"><a href="#球差" class="headerlink" title="球差"></a>球差</h2><h3 id="球差概念，轴向球差与垂轴球差，初级球差与高级球差"><a href="#球差概念，轴向球差与垂轴球差，初级球差与高级球差" class="headerlink" title="球差概念，轴向球差与垂轴球差，初级球差与高级球差"></a>球差概念，轴向球差与垂轴球差，初级球差与高级球差</h3><ul>
+<li>球差概念<br>(1)轴上点A发出的某孔径带的光线与近轴光线交于不同点，形成球差<br>轴向球差$\delta L’$<br>垂轴球差$\delta T’$<br>(2)如对于某个孔径带有$\delta L’ = 0$时称为对这个孔径带消球差<br>(3)存在球差时，在像面上会产生圆形弥散斑</li>
+<li>初级球差与高级球差<br>$\delta L’ = A_1h_1^2 + A_2h_1^4 + A_3h_1^6… = a_1u_1^2 + a_2u_1^4 + a_3u_1^6…$<br>$\delta T’ = B_1h_1^3 + B_2h_1^5 + B_3h_1^7… = b_1u_1^3 + b_2u_1^5 + b_3u_1^7…$<br>其中第一项称为初级球差，后面各项依次称为二级球差、三级球差等。初级球差以外的各项统称为高级球差</li>
+</ul>
+<h3 id="球差曲线，具有初级球差和二级球差时的特征"><a href="#球差曲线，具有初级球差和二级球差时的特征" class="headerlink" title="球差曲线，具有初级球差和二级球差时的特征"></a>球差曲线，具有初级球差和二级球差时的特征</h3><ul>
+<li>具有初级球差与二级球差时的特征<br>(1)$h_1$或$u_1$很小很小时，为近轴区，$\delta L’ = 0$<br>(2)$h_1$或$u_1$很小时，仅有初级量，称Seidel区，只需要计算一条边光即可确定公式中的系数<br>(3)$h_1$或$u_1$有一定大小，四次项不可忽略,得仅有初级和二级像差时的公式<br>$\delta L’ = A_1(\frac{h_1}{h_m})^2 + A_2(\frac{h_1}{h_m})^4$<br>对边光校正球差，在0.707取得最大球差<br>(4)$h_1$或$u_1$很大时,需要计算更多的光线<br>例如到三级，这时当全孔径和0.707孔径校正球差后，0.85孔径带具有最大剩余球差</li>
+<li>球差曲线</li>
+</ul>
+<h3 id="单个折射球面的球差特征，三个无球差点、反常区与半反常区，齐明透镜设计"><a href="#单个折射球面的球差特征，三个无球差点、反常区与半反常区，齐明透镜设计" class="headerlink" title="单个折射球面的球差特征，三个无球差点、反常区与半反常区，齐明透镜设计"></a>单个折射球面的球差特征，三个无球差点、反常区与半反常区，齐明透镜设计</h3><ul>
+<li>单个折射球面的球差和球差分布<br>会聚面产生负球差，发散面产生正球差，反常区和半反常区相反<br>(1)球心到齐明点称反常区<br>(2)顶点到球心称半反常区<br><img src="https://arkimg.oss-cn-hangzhou.aliyuncs.com/%E5%BA%94%E7%94%A8%E5%85%89%E5%AD%A6/%E5%83%8F%E5%B7%AE/1.png" alt="图1"></li>
+<li>齐明点、齐明面与齐明透镜<br>一对齐明点$L = \frac{n’ + n}{n}r, L’ = \frac{n’ + n}{n’}r$<br>必为实物成虚像或虚物成实像。此时该面不产生球差，称齐明面。加同心面可得齐明透镜<br><img src="https://arkimg.oss-cn-hangzhou.aliyuncs.com/%E5%BA%94%E7%94%A8%E5%85%89%E5%AD%A6/%E5%83%8F%E5%B7%AE/2.png" alt="图2"><br>齐明透镜成组使用，常在测量仪器中用于扩大孔径</li>
+</ul>
+<h3 id="初级球差与孔径的关系，第一赛得和数，整体缩放对像差的影响"><a href="#初级球差与孔径的关系，第一赛得和数，整体缩放对像差的影响" class="headerlink" title="初级球差与孔径的关系，第一赛得和数，整体缩放对像差的影响"></a>初级球差与孔径的关系，第一赛得和数，整体缩放对像差的影响</h3><ul>
+<li>初级球差，第一赛得和数<br>仅有初级量的区域称赛得(Seidel)区，在此区域内有$sinU = u$<br>$\delta L’ \propto u^2$</li>
+<li>整体缩放：指系统中所有线性量均乘以一个相同的倍数，而所有角度量不变<br>根据比例关系，球差随整体缩放线性变化。这对于实际球差、高级球差和其他像差也正确</li>
+</ul>
+<h3 id="薄透镜与简单薄透镜系统的球差特征、最小球差形状"><a href="#薄透镜与简单薄透镜系统的球差特征、最小球差形状" class="headerlink" title="薄透镜与简单薄透镜系统的球差特征、最小球差形状"></a>薄透镜与简单薄透镜系统的球差特征、最小球差形状</h3><ul>
+<li>正透镜恒产生负球差，负透镜恒产生正球差，当入、出射光线关于透镜对称时，球差取得极值（绝对值最小），此时的透镜形状为最小球差形状。</li>
+<li>单个薄透镜不可能消球差<br>校正方法：双胶合透镜，微小间隔的双分离透镜</li>
+</ul>
+<h3 id="平行平板的球差"><a href="#平行平板的球差" class="headerlink" title="平行平板的球差"></a>平行平板的球差</h3><ul>
+<li>近轴光线位移$\Delta l’ = (1 - \frac{1}{n})d$</li>
+<li>规律<br>(1)平行平板恒产生正球差，只能以产生负球差的系统补偿之。当且仅当光线垂直于平板表面入射时球差零<br>(2)平板厚则球差大<br>(3)平板虽薄但孔径大，球差也大</li>
+</ul>
+<h2 id="轴外像差"><a href="#轴外像差" class="headerlink" title="轴外像差"></a>轴外像差</h2><h3 id="正弦条件和等晕条件"><a href="#正弦条件和等晕条件" class="headerlink" title="正弦条件和等晕条件"></a>正弦条件和等晕条件</h3><ul>
+<li>正弦条件<br>$n’y’sinU’ = nysinU, \frac{h}{sinU’} = f’$</li>
+<li>等晕成像和等晕条件<br>实际由于球差存在，只能要求近轴轴外点具有和轴上点A相同的成像缺陷。此时称等晕成像，需要满足的条件称等晕条件<br>$1 - \frac{nsinU}{\beta n’sinU’} = \frac{\delta L’}{l_p’ - l’}$<br>当球差为零时，等晕条件化为正弦条件。<br>当不满足等晕条件时，轴上点与近轴轴外点成像缺陷不等，用正弦差表示</li>
+</ul>
+<h3 id="轴外像差-1"><a href="#轴外像差-1" class="headerlink" title="轴外像差"></a>轴外像差</h3><p>由于折射球面存在球差和像面弯曲，使轴外点衍生出一系列像差</p>
+<ul>
+<li><p>慧差：<br>(1)当系统不满足等晕条件时，轴外点存在彗差。<br><img src="https://arkimg.oss-cn-hangzhou.aliyuncs.com/%E5%BA%94%E7%94%A8%E5%85%89%E5%AD%A6/%E5%83%8F%E5%B7%AE/3.png" alt="图3"><br>(2)上下光线的交点偏离主光线：子午彗差<br>$K_t’ = \frac{1}{2}(y_a’ + y_b’) - y_p’$<br>前后光线的交点偏离主光线：弧矢彗差<br>$K_s’ = y_s’ - y_p’$<br>(3)仅有彗差时，将形成彗星状的弥散斑<br>(4)彗差和孔径、视场都有关, 且$K_{s0}, K_{t0} \propto u^2W$</p>
+</li>
+<li><p>像散和像面弯曲:<br>(1)子午细光束像点在主光线上，弧矢细光束像点在主光线和辅轴的交点上，两者之轴向距离为像散。子午细光束像点和弧矢细光束像点会偏离高斯像面。如果把各视场的子午细光束像点或弧矢细光束像点连起来，将会得到弯曲的像面，这就是像面弯曲。<br><img src="https://arkimg.oss-cn-hangzhou.aliyuncs.com/%E5%BA%94%E7%94%A8%E5%85%89%E5%AD%A6/%E5%83%8F%E5%B7%AE/4.png" alt="图4"><br>(2)像散为零时，子午细光束像点和弧矢细光束像点重合，但不与高斯像面重合，所以像面弯曲仍然存在，这种像面弯曲叫匹兹凡面弯曲<br>(3)像散，场曲只与视场有关，且$x_t’, x_s’,\Delta x’ \propto W^2$</p>
+</li>
+<li><p>畸变<br>(1)阑位置移动，主光线与高斯像面交点高度变化，引起像的变形<br>(2)畸变仅是像的变形，不影响像的清晰度<br>(3)实际像高比理想像高大，称正畸变(枕形)，反之称负畸变(桶形)<br>(4)相对畸变：$\frac{\delta y_p’}{y_0’} = \frac{y_p’ - y_0’}{y_0’}\times 100%$<br>(5)特征：<br>全对称系统（结构对称，物像对称），不产生畸变<br>孔阑与之重合的接触薄系统，不产生畸变（主光线通过系统中心，沿理想方向射出）<br>对于单薄透镜，光阑前移——负畸变，光阑后移——正畸变。因此，畸变与光阑位置有关<br>(6)畸变只与视场有关，且$\delta y_p’ \propto W^3$</p>
+</li>
+</ul>
+<h3 id="赛得和数"><a href="#赛得和数" class="headerlink" title="赛得和数"></a>赛得和数</h3><ul>
+<li>初级球差-第一赛得和数</li>
+<li>初级慧差-第二赛得和数</li>
+<li>初级像散-第三赛得和数</li>
+<li>初级场曲-第三、四赛得和数</li>
+<li>初级畸变-第五赛得和数</li>
+</ul>
+<h3 id="匹兹凡面弯曲"><a href="#匹兹凡面弯曲" class="headerlink" title="匹兹凡面弯曲"></a>匹兹凡面弯曲</h3><ul>
+<li>像散为0，任然存在场曲</li>
+<li>薄系统的匹兹凡和-第四赛得和数</li>
+<li>正负光焦度的分离是校正匹兹凡和的唯一方法</li>
+</ul>
+<h2 id="色差"><a href="#色差" class="headerlink" title="色差"></a>色差</h2><h3 id="位置色差"><a href="#位置色差" class="headerlink" title="位置色差"></a>位置色差</h3><ul>
+<li>由于同种材料对不同波长具有不同的折射率，对同一物方截距将算出不同的像方截距，导致位置色差</li>
+<li>对复色光成像的仪器要求对主色光校正单色像差，对成像光谱的两端校正色差</li>
+</ul>
+<h3 id="位置色差的度量与色差曲线"><a href="#位置色差的度量与色差曲线" class="headerlink" title="位置色差的度量与色差曲线"></a>位置色差的度量与色差曲线</h3><ul>
+<li>近轴区$\delta l_{ch}’ = l_F’ - l_C’$<br>一般有$\delta L_{ch}’ = L_F’ - L_C’$<br>级数式：$\delta L_{ch}’ = a_0 + a_1h_1^2 + a_2h_1^4+… = \delta l_{ch}’ + a_1h_1^2 + a_2h_1^4+…$</li>
+</ul>
+<h3 id="位置色差与球差的比较"><a href="#位置色差与球差的比较" class="headerlink" title="位置色差与球差的比较"></a>位置色差与球差的比较</h3><ul>
+<li>位置色差和球差都是轴上点像差</li>
+<li>位置色差和球差都产生圆形弥散斑</li>
+<li>位置色差产生彩色圆形弥散斑，球差产生单色圆形弥散斑</li>
+</ul>
+<h3 id="倍率色差"><a href="#倍率色差" class="headerlink" title="倍率色差"></a>倍率色差</h3><ul>
+<li>波长变化引起材料的折射率变化，继而引起光学系统的放大倍率变化，像的大小随之变化</li>
+<li>$\delta y_{ch}’ = y_F’ - y_C’$</li>
+</ul>
+<h3 id="初级位置色差-第一色差和数"><a href="#初级位置色差-第一色差和数" class="headerlink" title="初级位置色差-第一色差和数"></a>初级位置色差-第一色差和数</h3><h3 id="平行平板的初级位置色差"><a href="#平行平板的初级位置色差" class="headerlink" title="平行平板的初级位置色差"></a>平行平板的初级位置色差</h3><ul>
+<li>所以平行平板恒产生正色差，当且仅当时不产生色差</li>
+</ul>
+<h3 id="单薄透镜与薄系统的位置色差"><a href="#单薄透镜与薄系统的位置色差" class="headerlink" title="单薄透镜与薄系统的位置色差"></a>单薄透镜与薄系统的位置色差</h3><ul>
+<li>可见正透镜恒产生负色差，负透镜恒产生正色差，色差的大小与物距(像距)有关</li>
+</ul>
+<h3 id="初级倍率色差-第二色差和数"><a href="#初级倍率色差-第二色差和数" class="headerlink" title="初级倍率色差-第二色差和数"></a>初级倍率色差-第二色差和数</h3><h3 id="单薄透镜与薄系统的初级倍率色差"><a href="#单薄透镜与薄系统的初级倍率色差" class="headerlink" title="单薄透镜与薄系统的初级倍率色差"></a>单薄透镜与薄系统的初级倍率色差</h3><ul>
+<li>$C_I$ 为0时，$C_{II}$自动校正为0</li>
+<li>当即孔阑与之重合时，不论位置色差如何都能校正倍率色差</li>
+</ul>
+<h3 id="色差的校正"><a href="#色差的校正" class="headerlink" title="色差的校正"></a>色差的校正</h3><ul>
+<li>考虑双胶合及微小间隔的双分离组, 且满足<br>$\begin{cases}<br>\frac{\Phi_1}{v_1} + \frac{\Phi_2}{v_2} = 0\<br>\Phi_1 + \Phi_2 = \Phi<br>\end{cases}$</li>
+<li>有一定间隔d的分离透镜系统，满足<br>$\begin{cases}<br>\frac{\Phi_1}{v_1} + \frac{h_2^2}{h_1^2}\frac{\Phi_2}{v_2} = 0 \<br>\Phi_1 + \frac{h_2}{h_1}\Phi_2 = \Phi<br>\end{cases}$<br>物方无穷远时：$\frac{h_2}{h_1} = 1 - d\Phi_1$</li>
+</ul>
+<h3 id="初级色差与孔径、视场的关系"><a href="#初级色差与孔径、视场的关系" class="headerlink" title="初级色差与孔径、视场的关系"></a>初级色差与孔径、视场的关系</h3><ul>
+<li>初级位置色差与孔径和视场无关</li>
+<li>初级倍率色差只与视场有关，且$\delta y_{ch}’ \propto W$</li>
+<li>近轴光存在初级位置色差</li>
+</ul>
+]]></content>
+      <categories>
+        <category>学习所悟</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>光学</tag>
+        <tag>应用光学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>考研倒计时26！加油考研人！</title>
+    <url>/2020/11/29/study1/</url>
+    <content><![CDATA[<p>&emsp;&emsp;考研最后26天了，每日出了大量的刷题，记忆阶段也不能落下，政治英语每日提分背诵来了！<br><a id="more"></a></p>
+<h2 id="政治每日背诵"><a href="#政治每日背诵" class="headerlink" title="政治每日背诵"></a>政治每日背诵</h2><h3 id="对外开放的措施（毛中特部分分析题）"><a href="#对外开放的措施（毛中特部分分析题）" class="headerlink" title="对外开放的措施（毛中特部分分析题）"></a>对外开放的措施（毛中特部分分析题）</h3><ul>
+<li>推动全面开放，要以“一带一路”建设为重点，坚持“引进来”和“走出去”并重，遵循共商共建共享原则，加强创新能力开放合作，形成陆海内外联动、东西双向互济的开放格局。坚持公平开放、共赢开放、包容开放，构建公平竞争的内外资发展环境，推动经济全球化朝着普惠共赢方向发展，探索求同存异、包容共生的国际合作新途径。中国对外开放，不是要一家唱独角戏，而是要欢迎各方共同参与；不是要谋求势力范围，而是要支持各国共同发展；不是要营造自己的后花园，而是要建设各国共享的百花园。2019年4月26日，总书记在第二届“一带一路”国际合作高峰论坛开幕式上的主旨演讲指出，“中国将采取一系列重大改革开放举措，加强制度性、结构性安排，促进更高水平对外开放”。具体要做到以下几点：第一，更广领域扩大外资市场准入；第二，更大力度加强知识产权保护国际合作；第三，更大规模增加商品和服务进口；第四，更加有效实施国际宏观经济政策协调；第五，更加重视对外开放政策贯彻落实。  </li>
+<li>建设更高水平开放型经济新体制。</li>
+<li>开放型世界经济的首要之义是反对保护主义。</li>
+<li>今日之中国，不仅是中国之中国，而且是世界之中国。未来之中国，必将以更加开放的姿态拥抱世界，必将同世界形成更加良性的互动，带来更加进步和繁荣的中国和世界。</li>
+</ul>
+<h2 id="英语每日作文背诵"><a href="#英语每日作文背诵" class="headerlink" title="英语每日作文背诵"></a>英语每日作文背诵</h2><h3 id="建议信（英一小作文）"><a href="#建议信（英一小作文）" class="headerlink" title="建议信（英一小作文）"></a>建议信（英一小作文）</h3><p>Dear  Professor Byron,<br>&emsp;&emsp;Last week you asked students to write and give you feedback on your lectures. Therefore, I have outlined my thoughts below.<br>&emsp;&emsp;In general, I find your lectures very informative and inspiring. Indeed, I particularly like the way you demonstrate complex issues with the use of simple drawings. This makes your lessons both interesting and memorable. However, I do feel that you could provide us with more handouts, for I often fail to take down all the important points as time is limited. I would also like to see more discussion work, as I find this method the most suitable way to clarify and deepen my understanding of the subject content.<br>&emsp;&emsp;I’d like to thank you for the interest you are taking in us students and look forward to your next lecture.</p>
+<p align="right">Yours sincerely,</p>
+<p align="right">Li Ming</p>
+
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>&emsp;&emsp;以上内容选自徐涛老师微信公众号和王江涛老师英语必备范文。</p>
+]]></content>
+      <categories>
+        <category>学习所悟</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>考研</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>应用光学——光能及其传播计算</title>
     <url>/2020/12/11/opt7/</url>
     <content><![CDATA[<p>&emsp;&emsp;本章内容在考试中涉及较少<br><a id="more"></a><br>&emsp;&emsp;该部分《841工程光学基础》考纲内容如下</p>
@@ -341,100 +560,6 @@
       </tags>
   </entry>
   <entry>
-    <title>物理光学——傅里叶光学</title>
-    <url>/2020/12/01/opt3/</url>
-    <content><![CDATA[<p>&emsp;&emsp;大致更新完成<br><a id="more"></a><br>&emsp;&emsp;该部分《841工程光学基础》考纲内容如下</p>
-<blockquote>
-<p>熟练掌握电磁场叠加以及空间频率的概念；掌握4F系统光学系统用于光学信息处理的概念和过程；相干光学系统和非相干光学系统对成像影响的结论和运用；空间滤波的概念及简单计算。</p>
-</blockquote>
-<h2 id="平面波的复振幅分布和空间频率"><a href="#平面波的复振幅分布和空间频率" class="headerlink" title="平面波的复振幅分布和空间频率"></a>平面波的复振幅分布和空间频率</h2><h3 id="光场中任一平面上的复振幅分布"><a href="#光场中任一平面上的复振幅分布" class="headerlink" title="光场中任一平面上的复振幅分布"></a>光场中任一平面上的复振幅分布</h3><ul>
-<li>空间复振幅分布 $ \tilde{E}(x,y,z) = Aexp[ik(xcos\alpha + ycos\beta + zcos\gamma)] $</li>
-<li>令$z = z_0$ 则可以得到 $ \tilde{E}(x,y) = A’exp[i\frac{2\pi}{\lambda}(xcos\alpha + ycos\beta)] $</li>
-</ul>
-<h3 id="复振幅分布的空间频率及物理意义"><a href="#复振幅分布的空间频率及物理意义" class="headerlink" title="复振幅分布的空间频率及物理意义"></a>复振幅分布的空间频率及物理意义</h3><ul>
-<li>空间频率 $ u = \frac{cos\alpha}{\lambda} = \frac{sin\theta_x}{\lambda}, v = \frac{cos\beta}{\lambda} = \frac{sin\theta_y}{\lambda}$<br>则 $ \tilde{E}(x,y) = A’exp[i2\pi(ux + vy)] $</li>
-<li>空间频率的意义<br>(1)空间频率表示复振幅分布的周期性<br>(2)<br>(3)光波场某一平面上的复振幅分布可以分解成许多不同基本周期分布，则表明包含着许多不同的（u,v）成分，对应着许多不同方向$(cos\alpha,cos\beta)$传播的平面波<br>(4)（u,v）也可以表示不同强度分布的空间周期性</li>
-</ul>
-<h3 id="复杂复振幅按-u-v-的分解"><a href="#复杂复振幅按-u-v-的分解" class="headerlink" title="复杂复振幅按(u,v)的分解"></a>复杂复振幅按(u,v)的分解</h3><ul>
-<li>$\tilde{E}(x,y) = \iint\tilde{E}(u,v)exp[i2\pi(ux+vy))]dudv, \tilde{E}(x,y) = F^-1{\tilde{E}(u,v)}$</li>
-<li>$\tilde{E}(u,v) = \iint\tilde{E}(x,y)exp[-i2\pi(ux+vy))]dudv,<br>\tilde{E}(u,v) = F{\tilde{E}(x,y)}$</li>
-</ul>
-<h2 id="衍射现象的傅里叶分析方法"><a href="#衍射现象的傅里叶分析方法" class="headerlink" title="衍射现象的傅里叶分析方法"></a>衍射现象的傅里叶分析方法</h2><h3 id="夫琅和费近似下衍射场与孔径场的傅立叶变换关系"><a href="#夫琅和费近似下衍射场与孔径场的傅立叶变换关系" class="headerlink" title="夫琅和费近似下衍射场与孔径场的傅立叶变换关系"></a>夫琅和费近似下衍射场与孔径场的傅立叶变换关系</h3><ul>
-<li>$\tilde{E}(x,y) = \tilde{E}(u,v) = F{\tilde{E}(x,y)}, u = \frac{x}{\lambda z_1} v = \frac{y}{\lambda z_1}$<br>可以表示<br>(1)衍射场的分布只须对孔径面复振幅分布做一个傅氏变换求取<br>(2)焦面场（衍射场）上是不同方向传播的平面波的一个频谱分布，焦面即为频谱面</li>
-</ul>
-<h3 id="夫琅和费衍射举例"><a href="#夫琅和费衍射举例" class="headerlink" title="夫琅和费衍射举例"></a>夫琅和费衍射举例</h3><ul>
-<li>矩孔和单缝衍射<br>$\tilde{E}(x_1,y_1) = \tilde{E_0}(x_1,y_1)\tilde{t}(x_1,y_1) = rect(\frac{x_1}{a}) rect(\frac{y_1}{b}) $<br>$\tilde{E}(u,v) = F{\tilde{E}(x_1,y_1)} = abSinc(au)Sinc(bv)$<br>$I(x,y) = |\tilde{E}(u,v)|^2 = I_0 Sinc^2(\frac{ax}{\lambda z_1})Sinc(\frac{by}{\lambda z_1})$<br>傅里叶变换相似定理<br>$F{\tilde{E}(mx,ny)} = \frac{1}{mn}\tilde{E}(\frac{u}{m},\frac{v}{n})$</li>
-<li>双缝衍射<br>傅里叶变换的相移定理<br>$F{\tilde{E}(x-a,y-b)} = \tilde{E}(u,v)exp[-i2\pi(ua+vb)]$<br>$\tilde{E}(x_1) = rect(\frac{x_1-\frac{d}{2}}{a}) + rect(\frac{x_1+\frac{d}{2}}{a})$<br>$\tilde{E}(x) = F{\tilde{E}(x_1)} = F{rect(\frac{x_1}{a})}exp[-i2\pi u(-\frac{d}{2})] + F{rect(\frac{x_1}{a})}exp[-i2\pi u(\frac{d}{2})] $<br>$ = 2acos(\pi ud)Sinc(au) = 2aSinc(\frac{ax}{\lambda z_1})cos(\frac{\pi ud}{\lambda z_1}) $</li>
-<li>正弦光栅<br>无限长度时$ \tilde{t}(x_1) = 1 + cos2\pi u_0 x_1$<br>$\tilde{E}(u) = F{\tilde{E}(x_1} = \delta(u) + \frac{1}{2}\delta(u-u_0) + \frac{1}{2}\delta(u+u_0)$<br>有限长度时$ \tilde{t}(x_1) = (1 + cos2\pi u_0 x_1)rect(\frac{x_1}{L})$<br>$\tilde{E}(u) = [\delta(u) + \frac{1}{2}\delta(u-u_0) + \frac{1}{2}\delta(u+u_0)]*Lsinc(Lu)$<br>$ = Lsinc(Lu) + \frac{L}{2}sinc[L(u-u_0)] + \frac{L}{2}sinc[L(u+u_0)]$ </li>
-</ul>
-<h2 id="透镜的傅里叶变换性质和成像性质"><a href="#透镜的傅里叶变换性质和成像性质" class="headerlink" title="透镜的傅里叶变换性质和成像性质"></a>透镜的傅里叶变换性质和成像性质</h2><h3 id="透镜的透射系数"><a href="#透镜的透射系数" class="headerlink" title="透镜的透射系数"></a>透镜的透射系数</h3><ul>
-<li>$\tilde{t}(x_1,y_1) = exp[-ik\frac{x^2_1+y^2_1}{2f}]$</li>
-<li>注意<br>(1)透镜为有限大小时，引入光瞳函数<br>(2)对任一形式的入射光波，透镜给出相同形式的相位影响<br>(3)具有与透镜相同形式的透明片，其作用类似于相同焦距的透镜<br>(4)$f&gt;0$为正透镜$f&lt;0$为负透镜</li>
-</ul>
-<h3 id="透镜的傅里叶变换性质"><a href="#透镜的傅里叶变换性质" class="headerlink" title="透镜的傅里叶变换性质"></a>透镜的傅里叶变换性质</h3><ul>
-<li>衍射屏紧靠透镜前表面<br>后焦面上的光场分布是衍射屏平面复振幅分布的一个傅里叶变换，后焦面上某点振幅和相位取决于透过屏某一(u,v)分量的振幅和相位。</li>
-<li>衍射屏置于透镜前一定距离<br>透镜后焦面上得到的也是衍射屏平面复振幅分布的傅里叶变换</li>
-<li>结论<br>(1)单色平面波正入射时，不论衍射屏置于透镜何处，在透镜后焦面上将得到其频谱<br>(2)当球面波照明时，物置于任何位置，透镜均起到傅里叶变换作用，但其频谱面在点源像面位置上。<br>(3)存在孔径大小影响：孔径的衍射效应使像质模糊，透镜是低通滤波器，存在渐晕现象</li>
-</ul>
-<h3 id="透镜的成像性质"><a href="#透镜的成像性质" class="headerlink" title="透镜的成像性质"></a>透镜的成像性质</h3><h2 id="相干成像系统分析和相干传递函数"><a href="#相干成像系统分析和相干传递函数" class="headerlink" title="相干成像系统分析和相干传递函数"></a>相干成像系统分析和相干传递函数</h2><h3 id="点物成像和线性不变系统"><a href="#点物成像和线性不变系统" class="headerlink" title="点物成像和线性不变系统"></a>点物成像和线性不变系统</h3><ul>
-<li>点扩散函数： 单位复振幅或光强的点物经过系统所产生的像斑的复振幅或光强的分布<br>表示为：$ h(x,y;x’,y’)$</li>
-<li>光学系统的线性和空间不变性<br>(1)光学系统的线性性：<br>线性系统：其总输出为各单个输出的线性组合的系统。<br>光学系统的线性性：一个复杂的光场分布可以分解成许多简单基元分布的线性叠加。<br>相干光学成像系统：对复振幅分布呈线性。<br>非相干光学成像系统：对强度分布呈线性。<br>(2)空间不变性：<br>成像系统的空间不变性：点扩散函数的形式不随场面上物点位置而变的系统。点扩散函数只取决于观察点与几何像点相对位置。<br>此时$h(x,y;x’,y’) = h(x’-x,y’-y)$</li>
-</ul>
-<h3 id="扩展物体的成像"><a href="#扩展物体的成像" class="headerlink" title="扩展物体的成像"></a>扩展物体的成像</h3><ul>
-<li>对于线性空不变系统，扩展物体的光场分布可以看成许多点物经系统形成的点扩散函数的线性组合。</li>
-<li>$ g(x’)=\int O(x)h(x’-x)dx = O(x’)*h(x’)$</li>
-<li>物的像的光场分布是物的光场与系统点扩散函数的卷积</li>
-</ul>
-<h2 id="相干传递函数（CTF）"><a href="#相干传递函数（CTF）" class="headerlink" title="相干传递函数（CTF）"></a>相干传递函数（CTF）</h2><h3 id="CTF的意义"><a href="#CTF的意义" class="headerlink" title="CTF的意义"></a>CTF的意义</h3><p>二维物体的像g(x’,y’) = O(x’,y’)*h(x’,y’)<br>$ Gc(u,v) = F{g(x’,y’)},Oc(u,v) = F{o(x’,y’)},Hc(u,v) = F{h(x’,y’)}$<br>根据卷积定理有<br>$Hc(u,v) = \frac{Gc(u,v)}{Oc(u,v)}$<br>结论：物函数-&gt;物的频谱×相干传递函数-&gt;像的频谱-&gt;像函数</p>
-<h3 id="CTF的求取"><a href="#CTF的求取" class="headerlink" title="CTF的求取"></a>CTF的求取</h3><ul>
-<li>光瞳函数-&gt; 点扩散函数-&gt;相干传递函数<br>$h(x’,y’) = Aexp[ik\frac{x’^2+y’^2}{2l’}]\iint P(\xi,\eta)exp[-2\pi(u’\xi+v’\eta)]d\xi d\eta, u’ = \frac{x’}{\lambda l’},v’ = \frac{y’}{\lambda l’}$<br>故$h(x’,y’) = F{P(\lambda l’u,\lambda l’v)}$<br>所以$Hc(u,v) = FF{P(\lambda l’u,\lambda l’v)} = {P(-\lambda l’u,-\lambda l’v)}$<br>考虑到光瞳函数具有对称性<br>$Hc(u,v) = P(\lambda l’u,\lambda l’v)$</li>
-<li>讨论<br>(1)$Hc(u,v)$ 为01函数，存在一个截止频率$\rho_M = \sqrt{u^2+v^2}$<br>(2)光学系统是低通滤波器</li>
-<li>例：<br>$P(\xi,\eta = circ(\frac{\sqrt{\xi^2+\eta^2}}{D/2})$<br>$Hc(u,v) = circ(\frac{\sqrt{u^2+v^2}}{D/2\lambda l’})$<br>截止频率$\rho_M = \frac{D}{2\lambda l’}$<br>对于照相物镜成像系统<br>像面截止频率$\rho_M = \frac{D}{2\lambda l’}$<br>物面截止频率$\rho_M = \frac{D}{2\lambda l}$</li>
-</ul>
-<h2 id="非相干成像系统分析及光学传递函数"><a href="#非相干成像系统分析及光学传递函数" class="headerlink" title="非相干成像系统分析及光学传递函数"></a>非相干成像系统分析及光学传递函数</h2><h3 id="非相干系统的成像和光学传递函数（OTF）"><a href="#非相干系统的成像和光学传递函数（OTF）" class="headerlink" title="非相干系统的成像和光学传递函数（OTF）"></a>非相干系统的成像和光学传递函数（OTF）</h3><ul>
-<li>非相干系统的成像<br>$I(x’,y’) = I_0(x’,y’)*h_I(x’,y’)$<br>空间域中，像的强度分布是物的强度分布与点扩散函数的卷积</li>
-<li>光学传递函数（OTF）<br>$H_I(u,v) = \frac{G_I(u,v)}{O_I(u,v)}$<br>归一化<br>$H(u,v) = \frac{G(u,v)}{O(u,v)}</li>
-</ul>
-<h3 id="OTF求法"><a href="#OTF求法" class="headerlink" title="OTF求法"></a>OTF求法</h3><ul>
-<li><p>用OTF与CTF的自相关关系<br>$ H_I(u,v) = F{|H_c(u,v)|^2}$<br>$ H_I(u,v) = H_c(u,v)\otimes H_c(u,v)$<br>$H(u,v) = \frac{\iint P^*(\xi,\eta)P(\xi+\lambda l’u,\eta+\lambda l’u)d\xi d\eta}{\iint |P(\xi,\eta)|^2d\xi d\eta}$</p>
-</li>
-<li><p>图解<br>分母：为光瞳的总面积<br>分子：中心在原点与中心偏离 (-λl’u, -λl’v) 的两个光瞳的重叠面积<br>$H(u,v) = \frac{两错开光瞳的重叠}{光瞳总面积}</p>
-</li>
-<li>截止频率$\rho = 2\rho_0$</li>
-</ul>
-<h2 id="阿贝成像理论和波特实验"><a href="#阿贝成像理论和波特实验" class="headerlink" title="阿贝成像理论和波特实验"></a>阿贝成像理论和波特实验</h2><h3 id="阿贝成像理论"><a href="#阿贝成像理论" class="headerlink" title="阿贝成像理论"></a>阿贝成像理论</h3><ul>
-<li>相干光照明的光学透镜成像，是由两次衍射形成的。光学像是干涉条纹的叠加</li>
-</ul>
-<h3 id="波特实验"><a href="#波特实验" class="headerlink" title="波特实验"></a>波特实验</h3><ul>
-<li>波特实验是阿贝成像理论的证明</li>
-<li>空间滤波器——放在频谱面上处理频谱的孔径或掩模</li>
-<li>空间滤波——    对输入信息包含的各种空间频率成分施以振幅和相位调制,以实现特定的变换来改变像的结构。</li>
-<li>实验分析<br>二维光栅<br>(1)水平狭缝滤波—水平频谱代表物的垂直结构，像中只有垂直线条<br>(2)垂直狭缝滤波—垂直频谱综合成像，像中只有水平线条<br>一维光栅<br>(1)只让0级谱通过：像面一片明亮无像<br>(2)只让0级和±1级通过：像面在光栅几何像范围内呈现出一个周期与物光栅相同的余弦光栅<br>(3)只让±2级通过：周期为物光栅一半<br>(4)只挡0级：当a/d&gt;0.5时，物体对比反转；a/d&lt;0.5时，像形状与物相同，只是对比有些变化；a/d=0.5时，像面无光栅像</li>
-</ul>
-<h2 id="光学信息处理"><a href="#光学信息处理" class="headerlink" title="光学信息处理"></a>光学信息处理</h2><ul>
-<li>光学信息处理——用光学方法实现对输入信息的各种变换和处理</li>
-<li>光学方法实现变换或模拟运算：菲涅耳变换或傅里叶变换等；加、减、乘、除、微分、积分、卷积、相关等；编码，解码</li>
-<li>光学信息处理类型<br>相干光学信息处理——相干光照明，复振幅分布信息<br>非相干光学信息处理——非相干光照明，强度分布信息<br>白光信息处理——白光照明</li>
-<li>光学处理特点（与数字图象处理比较）:并行处理,所有信息同时输入进行处理,适合图象的快速,实时处理;抗干扰能力强,以光速运算,操作方便,适合光学神经网络,光通信,光存储光互连,光计算等.</li>
-</ul>
-<h3 id="相干光学信息处理"><a href="#相干光学信息处理" class="headerlink" title="相干光学信息处理"></a>相干光学信息处理</h3><ul>
-<li>相干光学处理系统<br>(1)相干光照明<br>(2)复振幅分布形式的信息<br>(3)系统对复振幅分布呈线性<br>(4)一般在频谱面作处理</li>
-<li>4f 系统</li>
-<li>空间滤波的傅里叶分析，利用4f系统进行计算<br>例：对光栅的分析</li>
-<li>应用举例<br>(1)激光输出处理:用针孔作低通滤波器，于透镜后焦面（频谱面）  上，滤去高频的相干噪声成分，得到均匀的光斑。<br>(2)图象加减:<br>(3)图像微分：使低对比像边缘增强，可用光学手段来实现<br>(4)图象识别：在 4f系统的频谱面上放上匹配滤波器，用光学相关实现图象识别</li>
-</ul>
-<h3 id="非相干光学系统处理"><a href="#非相干光学系统处理" class="headerlink" title="非相干光学系统处理"></a>非相干光学系统处理</h3><h3 id="白光信息处理"><a href="#白光信息处理" class="headerlink" title="白光信息处理"></a>白光信息处理</h3><h2 id="全息术"><a href="#全息术" class="headerlink" title="全息术"></a>全息术</h2><h3 id="全息术原理"><a href="#全息术原理" class="headerlink" title="全息术原理"></a>全息术原理</h3><p>全息术是利用“干涉记录、衍射重现”原理的两步无透镜成像术</p>
-]]></content>
-      <categories>
-        <category>学习所悟</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>光学</tag>
-        <tag>物理光学</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>考研倒计时24天！</title>
     <url>/2020/12/01/study2/</url>
     <content><![CDATA[<p>&emsp;&emsp;考研人，考研魂，考研都是人上人。<br><a id="more"></a></p>
@@ -450,30 +575,6 @@
 <h2 id="英语每日作文背诵"><a href="#英语每日作文背诵" class="headerlink" title="英语每日作文背诵"></a>英语每日作文背诵</h2><h3 id="致编辑信（英一小作文）"><a href="#致编辑信（英一小作文）" class="headerlink" title="致编辑信（英一小作文）"></a>致编辑信（英一小作文）</h3><p>Dear editors,<br>Many college students have no concept of thrift in their mind. They take it for granted that they spend the money provided by their parents before they enter society.<br>This extravangant spending is primarily caused by the following factors. First of all, nowadays most of the students are born in only-child families. They are the apple in their family’s eyes and naturally get more care and pocket money. In addition, with the improvement of the living standards, parents can afford higher expenditures for their children.<br>From my point of view, a college student, as a pure consumer, should learn to be thrifty. We should limit our expenditure on daily necessities and not buy whatever we want regardless of their prices. The habit of being thrifty can help us form right values and is favorable to our future development.</p>
 <p><p align="right">Yours sincerely,</p></p>
 <p><p align="right">Li Ming</p></p>
-<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>&emsp;&emsp;以上内容选自徐涛老师微信公众号和王江涛老师英语必备范文。</p>
-]]></content>
-      <categories>
-        <category>学习所悟</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>考研</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>考研倒计时26！加油考研人！</title>
-    <url>/2020/11/29/study1/</url>
-    <content><![CDATA[<p>&emsp;&emsp;考研最后26天了，每日出了大量的刷题，记忆阶段也不能落下，政治英语每日提分背诵来了！<br><a id="more"></a></p>
-<h2 id="政治每日背诵"><a href="#政治每日背诵" class="headerlink" title="政治每日背诵"></a>政治每日背诵</h2><h3 id="对外开放的措施（毛中特部分分析题）"><a href="#对外开放的措施（毛中特部分分析题）" class="headerlink" title="对外开放的措施（毛中特部分分析题）"></a>对外开放的措施（毛中特部分分析题）</h3><ul>
-<li>推动全面开放，要以“一带一路”建设为重点，坚持“引进来”和“走出去”并重，遵循共商共建共享原则，加强创新能力开放合作，形成陆海内外联动、东西双向互济的开放格局。坚持公平开放、共赢开放、包容开放，构建公平竞争的内外资发展环境，推动经济全球化朝着普惠共赢方向发展，探索求同存异、包容共生的国际合作新途径。中国对外开放，不是要一家唱独角戏，而是要欢迎各方共同参与；不是要谋求势力范围，而是要支持各国共同发展；不是要营造自己的后花园，而是要建设各国共享的百花园。2019年4月26日，总书记在第二届“一带一路”国际合作高峰论坛开幕式上的主旨演讲指出，“中国将采取一系列重大改革开放举措，加强制度性、结构性安排，促进更高水平对外开放”。具体要做到以下几点：第一，更广领域扩大外资市场准入；第二，更大力度加强知识产权保护国际合作；第三，更大规模增加商品和服务进口；第四，更加有效实施国际宏观经济政策协调；第五，更加重视对外开放政策贯彻落实。  </li>
-<li>建设更高水平开放型经济新体制。</li>
-<li>开放型世界经济的首要之义是反对保护主义。</li>
-<li>今日之中国，不仅是中国之中国，而且是世界之中国。未来之中国，必将以更加开放的姿态拥抱世界，必将同世界形成更加良性的互动，带来更加进步和繁荣的中国和世界。</li>
-</ul>
-<h2 id="英语每日作文背诵"><a href="#英语每日作文背诵" class="headerlink" title="英语每日作文背诵"></a>英语每日作文背诵</h2><h3 id="建议信（英一小作文）"><a href="#建议信（英一小作文）" class="headerlink" title="建议信（英一小作文）"></a>建议信（英一小作文）</h3><p>Dear  Professor Byron,<br>&emsp;&emsp;Last week you asked students to write and give you feedback on your lectures. Therefore, I have outlined my thoughts below.<br>&emsp;&emsp;In general, I find your lectures very informative and inspiring. Indeed, I particularly like the way you demonstrate complex issues with the use of simple drawings. This makes your lessons both interesting and memorable. However, I do feel that you could provide us with more handouts, for I often fail to take down all the important points as time is limited. I would also like to see more discussion work, as I find this method the most suitable way to clarify and deepen my understanding of the subject content.<br>&emsp;&emsp;I’d like to thank you for the interest you are taking in us students and look forward to your next lecture.</p>
-<p align="right">Yours sincerely,</p>
-<p align="right">Li Ming</p>
-
 <h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>&emsp;&emsp;以上内容选自徐涛老师微信公众号和王江涛老师英语必备范文。</p>
 ]]></content>
       <categories>
